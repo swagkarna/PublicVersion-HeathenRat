@@ -1,4 +1,4 @@
-All my friends are heathens , take it slow ç
+All my friends are heathens , take it slow 
 RBBRat = Stub 
 Client = GUI Server
 

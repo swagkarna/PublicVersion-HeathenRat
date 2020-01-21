@@ -1,0 +1,22 @@
+C:\Users\mehdi\source\repos\RBBRat\Client\obj\Debug\Client.vbprojAssemblyReference.cache
+C:\Users\mehdi\source\repos\RBBRat\Client\obj\Debug\Client.Form1.resources
+C:\Users\mehdi\source\repos\RBBRat\Client\obj\Debug\Client.Resources.resources
+C:\Users\mehdi\source\repos\RBBRat\Client\obj\Debug\Client.vbproj.GenerateResource.cache
+C:\Users\mehdi\source\repos\RBBRat\Client\bin\Debug\Bunifu.UI.WinForms.BunifuButton.xml
+C:\Users\mehdi\source\repos\RBBRat\Client\bin\Debug\Telerik.WinControls.xml
+C:\Users\mehdi\source\repos\RBBRat\Client\bin\Debug\Telerik.WinControls.UI.xml
+C:\Users\mehdi\source\repos\RBBRat\Client\obj\Debug\Client.vbproj.CopyComplete
+C:\Users\mehdi\source\repos\RBBRat\Client\bin\Debug\Bunifu.UI.WinForms.BunifuCheckBox.xml
+C:\Users\mehdi\source\repos\RBBRat\Client\bin\Debug\Bunifu.UI.WinForms.BunifuLabel.xml
+C:\Users\mehdi\source\repos\RBBRat\Client\bin\Debug\Bunifu.UI.WinForms.BunifuTextbox.xml
+C:\Users\mehdi\source\repos\RBBRat\Client\bin\Debug\Bunifu_UI_v1.5.3.xml
+C:\Users\mehdi\source\repos\RBBRat\Client\obj\Debug\Client.BUILDER.resources
+C:\Users\mehdi\source\repos\RBBRat\Client\obj\Debug\Client.vbproj.Fody.CopyLocal.cache
+C:\Users\mehdi\source\repos\RBBRat\Client\bin\Debug\Heathen Rat.exe.config
+C:\Users\mehdi\source\repos\RBBRat\Client\bin\Debug\Heathen Rat.exe
+C:\Users\mehdi\source\repos\RBBRat\Client\bin\Debug\Heathen Rat.pdb
+C:\Users\mehdi\source\repos\RBBRat\Client\bin\Debug\Heathen Rat.xml
+C:\Users\mehdi\source\repos\RBBRat\Client\obj\Debug\Heathen Rat.exe.config
+C:\Users\mehdi\source\repos\RBBRat\Client\obj\Debug\Heathen Rat.exe
+C:\Users\mehdi\source\repos\RBBRat\Client\obj\Debug\Heathen Rat.xml
+C:\Users\mehdi\source\repos\RBBRat\Client\obj\Debug\Heathen Rat.pdb

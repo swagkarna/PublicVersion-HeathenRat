@@ -1,0 +1,10 @@
+C:\Users\mehdi\source\repos\RBBRat\Client\bin\Debug\PW Plugin\SRC2\Recovery\obj\Debug\Recovery.csprojAssemblyReference.cache
+C:\Users\mehdi\source\repos\RBBRat\Client\bin\Debug\PW Plugin\SRC2\Recovery\bin\Debug\Recovery.dll
+C:\Users\mehdi\source\repos\RBBRat\Client\bin\Debug\PW Plugin\SRC2\Recovery\bin\Debug\Recovery.pdb
+C:\Users\mehdi\source\repos\RBBRat\Client\bin\Debug\PW Plugin\SRC2\Recovery\bin\Debug\Newtonsoft.Json.dll
+C:\Users\mehdi\source\repos\RBBRat\Client\bin\Debug\PW Plugin\SRC2\Recovery\bin\Debug\System.Data.SQLite.dll
+C:\Users\mehdi\source\repos\RBBRat\Client\bin\Debug\PW Plugin\SRC2\Recovery\bin\Debug\System.Data.SQLite.xml
+C:\Users\mehdi\source\repos\RBBRat\Client\bin\Debug\PW Plugin\SRC2\Recovery\bin\Debug\System.Data.SQLite.dll.config
+C:\Users\mehdi\source\repos\RBBRat\Client\bin\Debug\PW Plugin\SRC2\Recovery\obj\Debug\Recovery.csproj.CopyComplete
+C:\Users\mehdi\source\repos\RBBRat\Client\bin\Debug\PW Plugin\SRC2\Recovery\obj\Debug\Recovery.dll
+C:\Users\mehdi\source\repos\RBBRat\Client\bin\Debug\PW Plugin\SRC2\Recovery\obj\Debug\Recovery.pdb

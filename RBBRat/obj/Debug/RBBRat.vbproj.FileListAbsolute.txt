@@ -1,0 +1,11 @@
+C:\Users\mehdi\source\repos\RBBRat\RBBRat\obj\Debug\RBBRat.vbprojAssemblyReference.cache
+C:\Users\mehdi\source\repos\RBBRat\RBBRat\obj\Debug\RBBRat.Form1.resources
+C:\Users\mehdi\source\repos\RBBRat\RBBRat\obj\Debug\RBBRat.Resources.resources
+C:\Users\mehdi\source\repos\RBBRat\RBBRat\obj\Debug\RBBRat.vbproj.GenerateResource.cache
+C:\Users\mehdi\source\repos\RBBRat\RBBRat\bin\Debug\stub.exe.config
+C:\Users\mehdi\source\repos\RBBRat\RBBRat\bin\Debug\stub.exe
+C:\Users\mehdi\source\repos\RBBRat\RBBRat\bin\Debug\stub.pdb
+C:\Users\mehdi\source\repos\RBBRat\RBBRat\bin\Debug\stub.xml
+C:\Users\mehdi\source\repos\RBBRat\RBBRat\obj\Debug\stub.exe
+C:\Users\mehdi\source\repos\RBBRat\RBBRat\obj\Debug\stub.xml
+C:\Users\mehdi\source\repos\RBBRat\RBBRat\obj\Debug\stub.pdb

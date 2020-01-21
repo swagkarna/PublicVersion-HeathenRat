@@ -1,4 +1,3 @@
-C:\Users\mehdi\source\repos\RBBRat\RBBRat\obj\Debug\RBBRat.vbprojAssemblyReference.cache
 C:\Users\mehdi\source\repos\RBBRat\RBBRat\obj\Debug\RBBRat.Form1.resources
 C:\Users\mehdi\source\repos\RBBRat\RBBRat\obj\Debug\RBBRat.Resources.resources
 C:\Users\mehdi\source\repos\RBBRat\RBBRat\obj\Debug\RBBRat.vbproj.GenerateResource.cache

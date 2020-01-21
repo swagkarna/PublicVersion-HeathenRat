@@ -10,33 +10,7 @@ Public Class Form1
     Dim splitz As String = "||||SPLITTTT||||"
     Dim MonClient As TcpClient
     Dim id As String
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click 'Bouton de connexion.
 
-        Try 'Pour éviter les erreurs
-            If (Button1.Text = "Se connecter") Then
-                MonClient = New TcpClient()
-                MonClient.Connect(IPAddress.Parse("127.0.0.1"), Integer.Parse(TextPort.Text))
-                Dim Context As TaskScheduler = TaskScheduler.FromCurrentSynchronizationContext()
-                If MonClient.Connected Then
-                    ''
-                    Dim l As New Random
-                    id = l.Next(100000, 999999).ToString
-                    Dim k = id + "THISISMYID"
-                    Dim buffer() As Byte = Encoding.UTF8.GetBytes(k)
-                    MonClient.GetStream().Write(buffer, 0, buffer.Length)
-                    '''
-                End If
-                Task.Run(Sub() LireLesMessages(Context, MonClient.GetStream()))
-                Button1.Text = "Se déconnecter"
-            Else
-                MonClient.Close()
-                Button1.Text = "Se connecter"
-            End If
-        Catch ex As Exception
-            MessageBox.Show(ex.Message, "Erreur") 'Afficher l'erreur.
-        End Try
-
-    End Sub
 
     Private Sub LireLesMessages(ByVal Context As TaskScheduler, ByVal stream As NetworkStream) 'Lire les messages du serveur
 
@@ -115,19 +89,13 @@ Public Class Form1
             MessageFromHost(kkj)
 
             If (Fermé) Then
-                Button1.Text = "Se connecter"
+                ' Button1.Text = "Se connecter"
                 MonClient.Close()
             End If
         End If
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click 'Bouton envoyer un message au serveur.
-        If (Button1.Text = "Se déconnecter") Then
-            Dim buffer() As Byte = Encoding.UTF8.GetBytes(TextBox2.Text)
-            MonClient.GetStream().Write(buffer, 0, buffer.Length)
-            TextBox2.Text = ""
-        End If
-    End Sub
+
     Private Sub Form1_FormClosing(ByVal sender As System.Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles MyBase.FormClosing
 
 
@@ -224,7 +192,7 @@ Public Class Form1
                 Timer1.Start()
             End If
                 Task.Run(Sub() LireLesMessages(Context, MonClient.GetStream()))
-                Button1.Text = "Se déconnecter"
+            '  Button1.Text = "Se déconnecter"
 
             'MonClient.Close()
 

@@ -36,7 +36,7 @@ Public Class BUILDER
 
         Dim myresourcefullPath As String
         myresourcefullPath = System.IO.Path.GetFullPath(Application.StartupPath & "\") & "stub.exe"
-        '      FileOpen(1, Application.StartupPath & "\ENC5.exe", OpenMode.Binary, OpenAccess.Read)
+
         FileOpen(1, myresourcefullPath, OpenMode.Binary, OpenAccess.Read)
         Dim data As String = Space(LOF(1))
 

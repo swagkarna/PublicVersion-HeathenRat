@@ -23,21 +23,17 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim BorderEdges5 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
+        Dim StateProperties9 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
+        Dim StateProperties10 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
-        Dim BorderEdges1 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
-        Dim StateProperties1 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
-        Dim StateProperties2 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
-        Dim BorderEdges2 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
-        Dim StateProperties3 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
-        Dim StateProperties4 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
-        Dim BorderEdges3 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
-        Dim StateProperties5 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
-        Dim StateProperties6 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
+        Dim BorderEdges4 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
+        Dim StateProperties7 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
+        Dim StateProperties8 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
+        Dim BorderEdges6 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges()
+        Dim StateProperties11 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
+        Dim StateProperties12 As Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties = New Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.TextPort = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.XuiCustomGroupbox1 = New XanderUI.XUICustomGroupbox()
@@ -72,7 +68,6 @@ Partial Class Form1
         Me.BunifuDragControl1 = New Bunifu.Framework.UI.BunifuDragControl(Me.components)
         Me.XuiCustomGroupbox2 = New XanderUI.XUICustomGroupbox()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
-        Me.GroupBox2.SuspendLayout()
         Me.XuiCustomGroupbox1.SuspendLayout()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.XuiFlatTab1.SuspendLayout()
@@ -99,47 +94,6 @@ Partial Class Form1
         Me.TextBox1.Size = New System.Drawing.Size(398, 130)
         Me.TextBox1.TabIndex = 0
         Me.TextBox1.Text = "Logs:"
-        '
-        'GroupBox2
-        '
-        Me.GroupBox2.Controls.Add(Me.Button1)
-        Me.GroupBox2.Controls.Add(Me.TextBox2)
-        Me.GroupBox2.ForeColor = System.Drawing.Color.White
-        Me.GroupBox2.Location = New System.Drawing.Point(32, 330)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(359, 104)
-        Me.GroupBox2.TabIndex = 8
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Envoyer un message:"
-        Me.GroupBox2.Visible = False
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(272, 19)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 79)
-        Me.Button1.TabIndex = 1
-        Me.Button1.Text = "Envoyer"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(6, 19)
-        Me.TextBox2.Multiline = True
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.TextBox2.Size = New System.Drawing.Size(260, 79)
-        Me.TextBox2.TabIndex = 0
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(355, 55)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(97, 23)
-        Me.Button2.TabIndex = 11
-        Me.Button2.Text = "Lancer"
-        Me.Button2.UseVisualStyleBackColor = True
-        Me.Button2.Visible = False
         '
         'TextPort
         '
@@ -334,11 +288,11 @@ Partial Class Form1
         Me.BunifuButton1.ColorContrastOnClick = 45
         Me.BunifuButton1.ColorContrastOnHover = 45
         Me.BunifuButton1.Cursor = System.Windows.Forms.Cursors.Hand
-        BorderEdges1.BottomLeft = True
-        BorderEdges1.BottomRight = True
-        BorderEdges1.TopLeft = True
-        BorderEdges1.TopRight = True
-        Me.BunifuButton1.CustomizableEdges = BorderEdges1
+        BorderEdges5.BottomLeft = True
+        BorderEdges5.BottomRight = True
+        BorderEdges5.TopLeft = True
+        BorderEdges5.TopRight = True
+        Me.BunifuButton1.CustomizableEdges = BorderEdges5
         Me.BunifuButton1.DialogResult = System.Windows.Forms.DialogResult.None
         Me.BunifuButton1.DisabledBorderColor = System.Drawing.Color.Empty
         Me.BunifuButton1.DisabledFillColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -357,26 +311,26 @@ Partial Class Form1
         Me.BunifuButton1.IdleIconLeftImage = Global.Client.My.Resources.Resources.icons8_maintenasdnce
         Me.BunifuButton1.IdleIconRightImage = Nothing
         Me.BunifuButton1.IndicateFocus = False
-        Me.BunifuButton1.Location = New System.Drawing.Point(53, 29)
+        Me.BunifuButton1.Location = New System.Drawing.Point(33, 29)
         Me.BunifuButton1.Name = "BunifuButton1"
-        StateProperties1.BorderColor = System.Drawing.Color.Silver
-        StateProperties1.BorderRadius = 3
-        StateProperties1.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
-        StateProperties1.BorderThickness = 1
-        StateProperties1.FillColor = System.Drawing.Color.Silver
-        StateProperties1.ForeColor = System.Drawing.Color.White
-        StateProperties1.IconLeftImage = Nothing
-        StateProperties1.IconRightImage = Nothing
-        Me.BunifuButton1.onHoverState = StateProperties1
-        StateProperties2.BorderColor = System.Drawing.Color.LightSlateGray
-        StateProperties2.BorderRadius = 3
-        StateProperties2.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
-        StateProperties2.BorderThickness = 1
-        StateProperties2.FillColor = System.Drawing.Color.LightSlateGray
-        StateProperties2.ForeColor = System.Drawing.Color.White
-        StateProperties2.IconLeftImage = Nothing
-        StateProperties2.IconRightImage = Nothing
-        Me.BunifuButton1.OnPressedState = StateProperties2
+        StateProperties9.BorderColor = System.Drawing.Color.Silver
+        StateProperties9.BorderRadius = 3
+        StateProperties9.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
+        StateProperties9.BorderThickness = 1
+        StateProperties9.FillColor = System.Drawing.Color.Silver
+        StateProperties9.ForeColor = System.Drawing.Color.White
+        StateProperties9.IconLeftImage = Nothing
+        StateProperties9.IconRightImage = Nothing
+        Me.BunifuButton1.onHoverState = StateProperties9
+        StateProperties10.BorderColor = System.Drawing.Color.LightSlateGray
+        StateProperties10.BorderRadius = 3
+        StateProperties10.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
+        StateProperties10.BorderThickness = 1
+        StateProperties10.FillColor = System.Drawing.Color.LightSlateGray
+        StateProperties10.ForeColor = System.Drawing.Color.White
+        StateProperties10.IconLeftImage = Nothing
+        StateProperties10.IconRightImage = Nothing
+        Me.BunifuButton1.OnPressedState = StateProperties10
         Me.BunifuButton1.Size = New System.Drawing.Size(216, 51)
         Me.BunifuButton1.TabIndex = 4
         Me.BunifuButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -389,8 +343,6 @@ Partial Class Form1
         Me.TabPage3.Controls.Add(Me.BunifuButton2)
         Me.TabPage3.Controls.Add(Me.Label1)
         Me.TabPage3.Controls.Add(Me.TextPort)
-        Me.TabPage3.Controls.Add(Me.GroupBox2)
-        Me.TabPage3.Controls.Add(Me.Button2)
         Me.TabPage3.Location = New System.Drawing.Point(4, 20)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
@@ -412,11 +364,11 @@ Partial Class Form1
         Me.BunifuButton2.ColorContrastOnClick = 45
         Me.BunifuButton2.ColorContrastOnHover = 45
         Me.BunifuButton2.Cursor = System.Windows.Forms.Cursors.Hand
-        BorderEdges2.BottomLeft = True
-        BorderEdges2.BottomRight = True
-        BorderEdges2.TopLeft = True
-        BorderEdges2.TopRight = True
-        Me.BunifuButton2.CustomizableEdges = BorderEdges2
+        BorderEdges4.BottomLeft = True
+        BorderEdges4.BottomRight = True
+        BorderEdges4.TopLeft = True
+        BorderEdges4.TopRight = True
+        Me.BunifuButton2.CustomizableEdges = BorderEdges4
         Me.BunifuButton2.DialogResult = System.Windows.Forms.DialogResult.None
         Me.BunifuButton2.DisabledBorderColor = System.Drawing.Color.Empty
         Me.BunifuButton2.DisabledFillColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -437,24 +389,24 @@ Partial Class Form1
         Me.BunifuButton2.IndicateFocus = False
         Me.BunifuButton2.Location = New System.Drawing.Point(100, 6)
         Me.BunifuButton2.Name = "BunifuButton2"
-        StateProperties3.BorderColor = System.Drawing.Color.Silver
-        StateProperties3.BorderRadius = 3
-        StateProperties3.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
-        StateProperties3.BorderThickness = 1
-        StateProperties3.FillColor = System.Drawing.Color.Silver
-        StateProperties3.ForeColor = System.Drawing.Color.White
-        StateProperties3.IconLeftImage = Nothing
-        StateProperties3.IconRightImage = Nothing
-        Me.BunifuButton2.onHoverState = StateProperties3
-        StateProperties4.BorderColor = System.Drawing.Color.LightSlateGray
-        StateProperties4.BorderRadius = 3
-        StateProperties4.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
-        StateProperties4.BorderThickness = 1
-        StateProperties4.FillColor = System.Drawing.Color.LightSlateGray
-        StateProperties4.ForeColor = System.Drawing.Color.White
-        StateProperties4.IconLeftImage = Nothing
-        StateProperties4.IconRightImage = Nothing
-        Me.BunifuButton2.OnPressedState = StateProperties4
+        StateProperties7.BorderColor = System.Drawing.Color.Silver
+        StateProperties7.BorderRadius = 3
+        StateProperties7.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
+        StateProperties7.BorderThickness = 1
+        StateProperties7.FillColor = System.Drawing.Color.Silver
+        StateProperties7.ForeColor = System.Drawing.Color.White
+        StateProperties7.IconLeftImage = Nothing
+        StateProperties7.IconRightImage = Nothing
+        Me.BunifuButton2.onHoverState = StateProperties7
+        StateProperties8.BorderColor = System.Drawing.Color.LightSlateGray
+        StateProperties8.BorderRadius = 3
+        StateProperties8.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
+        StateProperties8.BorderThickness = 1
+        StateProperties8.FillColor = System.Drawing.Color.LightSlateGray
+        StateProperties8.ForeColor = System.Drawing.Color.White
+        StateProperties8.IconLeftImage = Nothing
+        StateProperties8.IconRightImage = Nothing
+        Me.BunifuButton2.OnPressedState = StateProperties8
         Me.BunifuButton2.Size = New System.Drawing.Size(218, 40)
         Me.BunifuButton2.TabIndex = 19
         Me.BunifuButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -572,11 +524,11 @@ Partial Class Form1
         Me.BunifuButton3.ColorContrastOnClick = 45
         Me.BunifuButton3.ColorContrastOnHover = 45
         Me.BunifuButton3.Cursor = System.Windows.Forms.Cursors.Hand
-        BorderEdges3.BottomLeft = True
-        BorderEdges3.BottomRight = True
-        BorderEdges3.TopLeft = True
-        BorderEdges3.TopRight = True
-        Me.BunifuButton3.CustomizableEdges = BorderEdges3
+        BorderEdges6.BottomLeft = True
+        BorderEdges6.BottomRight = True
+        BorderEdges6.TopLeft = True
+        BorderEdges6.TopRight = True
+        Me.BunifuButton3.CustomizableEdges = BorderEdges6
         Me.BunifuButton3.DialogResult = System.Windows.Forms.DialogResult.None
         Me.BunifuButton3.DisabledBorderColor = System.Drawing.Color.Empty
         Me.BunifuButton3.DisabledFillColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -598,24 +550,24 @@ Partial Class Form1
         Me.BunifuButton3.IndicateFocus = False
         Me.BunifuButton3.Location = New System.Drawing.Point(0, 476)
         Me.BunifuButton3.Name = "BunifuButton3"
-        StateProperties5.BorderColor = System.Drawing.Color.Silver
-        StateProperties5.BorderRadius = 3
-        StateProperties5.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
-        StateProperties5.BorderThickness = 1
-        StateProperties5.FillColor = System.Drawing.Color.Silver
-        StateProperties5.ForeColor = System.Drawing.Color.White
-        StateProperties5.IconLeftImage = Nothing
-        StateProperties5.IconRightImage = Nothing
-        Me.BunifuButton3.onHoverState = StateProperties5
-        StateProperties6.BorderColor = System.Drawing.Color.LightSlateGray
-        StateProperties6.BorderRadius = 3
-        StateProperties6.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
-        StateProperties6.BorderThickness = 1
-        StateProperties6.FillColor = System.Drawing.Color.LightSlateGray
-        StateProperties6.ForeColor = System.Drawing.Color.White
-        StateProperties6.IconLeftImage = Nothing
-        StateProperties6.IconRightImage = Nothing
-        Me.BunifuButton3.OnPressedState = StateProperties6
+        StateProperties11.BorderColor = System.Drawing.Color.Silver
+        StateProperties11.BorderRadius = 3
+        StateProperties11.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
+        StateProperties11.BorderThickness = 1
+        StateProperties11.FillColor = System.Drawing.Color.Silver
+        StateProperties11.ForeColor = System.Drawing.Color.White
+        StateProperties11.IconLeftImage = Nothing
+        StateProperties11.IconRightImage = Nothing
+        Me.BunifuButton3.onHoverState = StateProperties11
+        StateProperties12.BorderColor = System.Drawing.Color.LightSlateGray
+        StateProperties12.BorderRadius = 3
+        StateProperties12.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid
+        StateProperties12.BorderThickness = 1
+        StateProperties12.FillColor = System.Drawing.Color.LightSlateGray
+        StateProperties12.ForeColor = System.Drawing.Color.White
+        StateProperties12.IconLeftImage = Nothing
+        StateProperties12.IconRightImage = Nothing
+        Me.BunifuButton3.OnPressedState = StateProperties12
         Me.BunifuButton3.Size = New System.Drawing.Size(1275, 39)
         Me.BunifuButton3.TabIndex = 5
         Me.BunifuButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -670,8 +622,6 @@ Partial Class Form1
         Me.MinimizeBox = False
         Me.Name = "Form1"
         Me.Text = "Form1"
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
         Me.XuiCustomGroupbox1.ResumeLayout(False)
         Me.XuiCustomGroupbox1.PerformLayout()
         Me.ContextMenuStrip1.ResumeLayout(False)
@@ -692,10 +642,6 @@ Partial Class Form1
 
     End Sub
     Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents Button2 As Button
     Friend WithEvents TextPort As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents XuiCustomGroupbox1 As XanderUI.XUICustomGroupbox

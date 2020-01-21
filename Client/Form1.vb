@@ -7,30 +7,9 @@ Public Class Form1
     Dim MonServeur As TcpListener 'Le serveur
     Dim LesClients As List(Of TcpClient) 'Les clients TCP
     Dim counteur As Integer = 0
-    'Dim client1 As LeClient
-    '   Dim client2 As LeClient
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Try 'Au cas d'erreur
-            If (Button2.Text = "Lancer") Then
-                MonServeur = New TcpListener(IPAddress.Any, Integer.Parse(TextPort.Text))
-                LesClients = New List(Of TcpClient)
-                MonServeur.Start()
-                Dim Context As TaskScheduler = TaskScheduler.FromCurrentSynchronizationContext()
-                Task.Factory.StartNew(Sub() Accepter(Context), CancellationToken.None, TaskCreationOptions.LongRunning)
-                Button2.Text = "Arrêter"
-            Else
-                For Each client As TcpClient In LesClients
-                    client.Close() 'Fermer la connexion avec tous les clients.
-                Next
-                MonServeur.Stop()
-                Button2.Text = "Lancer"
-            End If
-        Catch ex As Exception
-            ' MessageBox.Show(ex.Message, "Erreur") 'Message d'erreur
-        End Try
 
-    End Sub
+
 
     Private Sub Accepter(ByVal Context As TaskScheduler) 'Accepter les clients
         Try
@@ -121,38 +100,7 @@ Public Class Form1
 
     End Sub
     Dim lk As String
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click 'Buton Envoyer message aux clients.
 
-        If (LesClients.Count > 0 And TextBox2.Text IsNot "") Then
-            Dim LeMessage As String = TextBox2.Text
-            Dim buffer() As Byte = Encoding.UTF8.GetBytes(LeMessage)
-
-            For Each h In ListView1.SelectedItems
-                MessageBox.Show(h.ToString)
-                Dim o As String = h.ToString.Replace("ListViewItem: ", "")
-                Dim odd As String = o.Replace("{", "")
-                Dim odd2 As String = odd.Replace("}", "")
-                Dim odd3() As String = Split(odd2, ":")
-                MessageBox.Show(odd3(0))
-                MessageBox.Show(odd3(1))
-                lk = odd2
-                '   Dim p As TcpClient(odd3(0), odd3(1))
-
-
-                ' p.GetStream().Write(buffer, 0, buffer.Length)
-            Next
-
-            For Each client As TcpClient In LesClients
-
-                If lk = client.Client.RemoteEndPoint.ToString Then
-                    MessageBox.Show(client.Client.RemoteEndPoint.ToString)
-                    client.GetStream().Write(buffer, 0, buffer.Length)
-                End If
-
-            Next
-
-        End If
-    End Sub
 
 
 

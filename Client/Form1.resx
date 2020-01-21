@@ -121,17 +121,6 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="BunifuButton1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAANgAAAAzCAYAAAD1o8asAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEcSURBVHhe7dMxSgNBAIXhOUqOYekJPIPH8CD2toK1lnoI
-        K4uksjA7LDFg5S6MLEwjpInr674HX/fav5hZeIfWNsM4P3y21oB19vX7cWmq51XKfpifX24+2m15BVZ6
-        un5vwzjtel6lLNWdOgJ/szTV8xIY/DeBQZDAIEhgECQwCBIYBAkMggQGQQKDIIFBkMAgSGAQJDAIEhgE
-        CQyCBAZBAoMggUGQwCBIYBAkMAgSGAQJDIIEBkECgyCBQZDAIEhgECQwCBIYBAkMggQGQQKDIIFBkMAg
-        SGAQJDAIEhgECQyCBAZBAoMggUGQwCBIYBD0K7BhnHb3F9uTR+A8d5u3Nn7Nx55XKYfWLutxrkt1wDpL
-        XLVOVz0vM8uslB8GAV2fSWLkgAAAAABJRU5ErkJggg==
-</value>
-  </data>
   <data name="BunifuButton2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAANoAAAAoCAYAAACYR+TJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -141,6 +130,17 @@
         ECA0CBAaBAgNAoQGAUKDAKFBgNAgQGgQIDQIEBoECA0ChAYBQoMAoUGA0CBAaBAgNAgQGgQIDQJ+hdbf
         f16fPB88BP7mavPU5s9lNzL7eRZ/WndL7fUB6+iR1bo/G5mZ2XFXyjcri+kzNDG2MAAAAABJRU5ErkJg
         gg==
+</value>
+  </data>
+  <data name="BunifuButton1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAANgAAAAzCAYAAAD1o8asAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEcSURBVHhe7dMxSgNBAIXhOUqOYekJPIPH8CD2toK1lnoI
+        K4uksjA7LDFg5S6MLEwjpInr674HX/fav5hZeIfWNsM4P3y21oB19vX7cWmq51XKfpifX24+2m15BVZ6
+        un5vwzjtel6lLNWdOgJ/szTV8xIY/DeBQZDAIEhgECQwCBIYBAkMggQGQQKDIIFBkMAgSGAQJDAIEhgE
+        CQyCBAZBAoMggUGQwCBIYBAkMAgSGAQJDIIEBkECgyCBQZDAIEhgECQwCBIYBAkMggQGQQKDIIFBkMAg
+        SGAQJDAIEhgECQyCBAZBAoMggUGQwCBIYBD0K7BhnHb3F9uTR+A8d5u3Nn7Nx55XKYfWLutxrkt1wDpL
+        XLVOVz0vM8uslB8GAV2fSWLkgAAAAABJRU5ErkJggg==
 </value>
   </data>
   <metadata name="ContextMenuStrip2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">

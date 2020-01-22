@@ -146,6 +146,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="ScreenForm.Designer.vb">
+      <DependentUpon>ScreenForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ScreenForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="BUILDER.resx">
@@ -159,6 +165,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScreenForm.resx">
+      <DependentUpon>ScreenForm.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -189,6 +198,9 @@
   <ItemGroup>
     <Content Include="icons8_joqsdker_dc.ico" />
     <Content Include="icons8_spyqsqs.ico" />
+    <None Include="Resources\icons8_imaqsdqsdge_file.ico" />
+    <None Include="Resources\icons8_workstqsdation.ico" />
+    <None Include="Resources\icons8_monitodzedr.ico" />
     <None Include="Resources\icons8_code.ico" />
     <None Include="Resources\icons8_export.ico" />
     <None Include="Resources\icons8_filled_message.ico" />

@@ -1,4 +1,3 @@
-C:\Users\mehdi\source\repos\RBBRat\Client\obj\Debug\Client.vbprojAssemblyReference.cache
 C:\Users\mehdi\source\repos\RBBRat\Client\obj\Debug\Client.Form1.resources
 C:\Users\mehdi\source\repos\RBBRat\Client\obj\Debug\Client.Resources.resources
 C:\Users\mehdi\source\repos\RBBRat\Client\obj\Debug\Client.vbproj.GenerateResource.cache
@@ -20,3 +19,5 @@ C:\Users\mehdi\source\repos\RBBRat\Client\obj\Debug\Heathen Rat.exe.config
 C:\Users\mehdi\source\repos\RBBRat\Client\obj\Debug\Heathen Rat.exe
 C:\Users\mehdi\source\repos\RBBRat\Client\obj\Debug\Heathen Rat.xml
 C:\Users\mehdi\source\repos\RBBRat\Client\obj\Debug\Heathen Rat.pdb
+C:\Users\mehdi\source\repos\RBBRat\Client\obj\Debug\Client.ScreenForm.resources
+C:\Users\mehdi\source\repos\RBBRat\Client\obj\Debug\Client.vbprojAssemblyReference.cache

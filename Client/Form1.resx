@@ -121,17 +121,6 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="BunifuButton2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAANoAAAAoCAYAAACYR+TJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD+SURBVHhe7d0hTgRBFEXRWsosA8kKWAPLYCF4LAkaJCwC
-        hQCFYLrSgUlQTCdFipQhGQU9T52XHPft1b+YWWjvrW2mebn5aK0B69jWr9ve1sislO203D9cvLXL8gis
-        5O78tU3z/mVkVkqv79Ah8D+9rZGZ0OBYhAYBQoMAoUGA0CBAaBAgNAgQGgQIDQKEBgFCgwChQYDQIEBo
-        ECA0CBAaBAgNAoQGAUKDAKFBgNAgQGgQIDQIEBoECA0ChAYBQoMAoUGA0CBAaBAgNAgQGgQIDQJ+hdbf
-        f16fPB88BP7mavPU5s9lNzL7eRZ/WndL7fUB6+iR1bo/G5mZ2XFXyjcri+kzNDG2MAAAAABJRU5ErkJg
-        gg==
-</value>
-  </data>
   <data name="BunifuButton1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAANgAAAAzCAYAAAD1o8asAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -141,6 +130,17 @@
         CQyCBAZBAoMggUGQwCBIYBAkMAgSGAQJDIIEBkECgyCBQZDAIEhgECQwCBIYBAkMggQGQQKDIIFBkMAg
         SGAQJDAIEhgECQyCBAZBAoMggUGQwCBIYBD0K7BhnHb3F9uTR+A8d5u3Nn7Nx55XKYfWLutxrkt1wDpL
         XLVOVz0vM8uslB8GAV2fSWLkgAAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="BunifuButton2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAANoAAAAoCAYAAACYR+TJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD+SURBVHhe7d0hTgRBFEXRWsosA8kKWAPLYCF4LAkaJCwC
+        hQCFYLrSgUlQTCdFipQhGQU9T52XHPft1b+YWWjvrW2mebn5aK0B69jWr9ve1sislO203D9cvLXL8gis
+        5O78tU3z/mVkVkqv79Ah8D+9rZGZ0OBYhAYBQoMAoUGA0CBAaBAgNAgQGgQIDQKEBgFCgwChQYDQIEBo
+        ECA0CBAaBAgNAoQGAUKDAKFBgNAgQGgQIDQIEBoECA0ChAYBQoMAoUGA0CBAaBAgNAgQGgQIDQJ+hdbf
+        f16fPB88BP7mavPU5s9lNzL7eRZ/WndL7fUB6+iR1bo/G5mZ2XFXyjcri+kzNDG2MAAAAABJRU5ErkJg
+        gg==
 </value>
   </data>
   <metadata name="ContextMenuStrip2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
@@ -162,6 +162,9 @@
   </data>
   <metadata name="BunifuDragControl1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>174, 17</value>
+  </metadata>
+  <metadata name="OpenFileWallpaper.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>491, 17</value>
   </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

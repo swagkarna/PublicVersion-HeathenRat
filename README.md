@@ -1,3 +1,12 @@
+This rat works with tcp client and server ! I don't take any responsabilites for misusage of this Remote Access Tool ! I used some different libraries (for example the Passwords Plugin) and all what I re-used in my code is linked in commentaries !
+
+
+
+Currently in developement , be patient I work alone
+
+
+
+
 All my friends are heathens , take it slow 
 RBBRat = Stub 
 Client = GUI Server

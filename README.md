@@ -1,4 +1,4 @@
-This rat works with tcp client and server ! I don't take any responsabilites for misusage of this Remote Access Tool ! I used some different libraries (for example the Passwords Plugin) and all what I re-used in my code is linked in commentaries !
+This rat works with tcp client and server ! I don't take any responsabilites for misusage of this Remote Access Tool , you're  responsible for your acts ! ! I used some different libraries (for example the Passwords Plugin) and all what I re-used in my code is linked in commentaries !
 
 
 

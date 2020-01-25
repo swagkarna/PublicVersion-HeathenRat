@@ -12,6 +12,7 @@ LAST UPDATE :
 -added taskmanager (can kill task actually don't use refresh feature it is broken for now)
 -removed garbage dll and codes
 -added commentaries to understand
+-added src of DDOS plugin + PW plugins (the 2)
 
 
 NOTE : 

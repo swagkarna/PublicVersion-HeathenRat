@@ -19,7 +19,14 @@ NOTE :
 -LET DDOS.dll next to Heathen Rat , it's a plugin to show you how can work a plugin
 -I put code of small plugin inside my client (like change wallpaper) and won't move it to build a plugin
 
+TODO List :
 
+-Improve UI == 50%
+-File Manager == 90 %
+-Funny == 0 %
+-More DDOS/Flood Options == 0 %
+-More options for builder == 0 %
+... == 0 %
 
 I used src from https://www.youtube.com/watch?v=UWJja8Qp65Y&t and https://www.youtube.com/watch?v=UytjOcSHje8
 

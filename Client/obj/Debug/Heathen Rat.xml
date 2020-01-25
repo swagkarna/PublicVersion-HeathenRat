@@ -22,6 +22,21 @@ Heathen Rat
   les recherches de ressources à l'aide de cette classe de ressource fortement typée.
 </summary>
 </member>
+<member name="P:Client.My.Resources.Resources.icons8_azdazsystem_task">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Client.My.Resources.Resources.icons8_behavior_blocker">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Client.My.Resources.Resources.icons8_broadcasFFQDFQting">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Client.My.Resources.Resources.icons8_code">
 <summary>
   Recherche une ressource localisée de type System.Drawing.Bitmap.
@@ -38,6 +53,11 @@ Heathen Rat
 </summary>
 </member>
 <member name="P:Client.My.Resources.Resources.icons8_imaqsdqsdge_file">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Client.My.Resources.Resources.icons8_joqsdker_suicide_squad_32">
 <summary>
   Recherche une ressource localisée de type System.Drawing.Bitmap.
 </summary>
@@ -73,6 +93,16 @@ Heathen Rat
 </summary>
 </member>
 <member name="P:Client.My.Resources.Resources.iconsqsd8_2">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Client.My.Resources.Resources.iconsqsdqs8_skull">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Client.My.Resources.Resources.iconsqsdqsd8_server">
 <summary>
   Recherche une ressource localisée de type System.Drawing.Bitmap.
 </summary>

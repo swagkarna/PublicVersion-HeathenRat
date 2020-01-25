@@ -9,3 +9,4 @@ C:\Users\mehdi\source\repos\RBBRat\RBBRat\obj\Debug\stub.exe
 C:\Users\mehdi\source\repos\RBBRat\RBBRat\obj\Debug\stub.xml
 C:\Users\mehdi\source\repos\RBBRat\RBBRat\obj\Debug\stub.pdb
 C:\Users\mehdi\source\repos\RBBRat\RBBRat\obj\Debug\RBBRat.vbprojAssemblyReference.cache
+C:\Users\mehdi\source\repos\RBBRat\RBBRat\obj\Debug\RBBRat.Form2.resources

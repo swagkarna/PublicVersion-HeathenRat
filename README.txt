@@ -12,4 +12,4 @@ Result :
 
 - https://cyberscan.org/results.php?id=JAl0C4STDY 1 / 24  -21-01-2020 
 
-YOU NEED BUNIFU , XANDERUI  , TELERIKUI
+YOU NEED BUNIFU , XANDERUI 

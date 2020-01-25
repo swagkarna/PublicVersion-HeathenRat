@@ -2,7 +2,7 @@ All my friends are heathens , take it slow
 RBBRat = Stub 
 Client = GUI Server
 
-LAST UPDATE :
+LAST UPDATE 25-01-20 20:55 :
 
 -fixed bugs client not try to reconnect to server after those closes
 -added screenlocker

@@ -2,6 +2,24 @@ All my friends are heathens , take it slow
 RBBRat = Stub 
 Client = GUI Server
 
+LAST UPDATE :
+
+-fixed bugs client not try to reconnect to server after those closes
+-added screenlocker
+-added screenshot
+-added UDP Flood
+-added change wallpaper 
+-added taskmanager (can kill task actually don't use refresh feature it is broken for now)
+-removed garbage dll and codes
+-added commentaries to understand
+
+
+NOTE : 
+-LET DDOS.dll next to Heathen Rat , it's a plugin to show you how can work a plugin
+-I put code of small plugin inside my client (like change wallpaper) and won't move it to build a plugin
+
+
+
 I used src from https://www.youtube.com/watch?v=UWJja8Qp65Y&t and https://www.youtube.com/watch?v=UytjOcSHje8
 
 Result : 

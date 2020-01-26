@@ -32,7 +32,8 @@ TODO List :
 
 -Improve UI == 55 %
 -File Manager == 95 %
--Funny == 10 %
+-Funny == 30 %
+-Funny Audio == 95 %
 -More DDOS/Flood Options == 0 %
 -More options for builder == 0 %
 ... == 0 %

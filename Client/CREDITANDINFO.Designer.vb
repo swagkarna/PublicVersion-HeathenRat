@@ -44,6 +44,7 @@ Partial Class CREDITANDINFO
         Me.ClientSize = New System.Drawing.Size(522, 187)
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "CREDITANDINFO"
         Me.Text = "Credit + Sources"
         Me.ResumeLayout(False)

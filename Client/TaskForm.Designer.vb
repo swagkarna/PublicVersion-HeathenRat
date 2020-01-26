@@ -30,9 +30,9 @@ Partial Class TaskForm
         Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.KillToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RefreshToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.RefreshToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -72,14 +72,20 @@ Partial Class TaskForm
         Me.ContextMenuStrip1.BackColor = System.Drawing.Color.DarkViolet
         Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.KillToolStripMenuItem, Me.RefreshToolStripMenuItem})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(181, 70)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(114, 48)
         '
         'KillToolStripMenuItem
         '
         Me.KillToolStripMenuItem.Image = Global.Client.My.Resources.Resources.iconsqsdqs8_skull
         Me.KillToolStripMenuItem.Name = "KillToolStripMenuItem"
-        Me.KillToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.KillToolStripMenuItem.Size = New System.Drawing.Size(113, 22)
         Me.KillToolStripMenuItem.Text = "Kill "
+        '
+        'RefreshToolStripMenuItem
+        '
+        Me.RefreshToolStripMenuItem.Name = "RefreshToolStripMenuItem"
+        Me.RefreshToolStripMenuItem.Size = New System.Drawing.Size(113, 22)
+        Me.RefreshToolStripMenuItem.Text = "Refresh"
         '
         'Label1
         '
@@ -100,12 +106,6 @@ Partial Class TaskForm
         Me.Panel1.Size = New System.Drawing.Size(800, 28)
         Me.Panel1.TabIndex = 3
         '
-        'RefreshToolStripMenuItem
-        '
-        Me.RefreshToolStripMenuItem.Name = "RefreshToolStripMenuItem"
-        Me.RefreshToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.RefreshToolStripMenuItem.Text = "Refresh"
-        '
         'TaskForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -115,6 +115,7 @@ Partial Class TaskForm
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.ListView1)
         Me.ForeColor = System.Drawing.Color.White
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "TaskForm"
         Me.Text = "Task Manager"

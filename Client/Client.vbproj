@@ -123,11 +123,35 @@
     <Compile Include="CREDITANDINFO.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.vb">
+    <Compile Include="DefaultSong.Designer.vb">
+      <DependentUpon>DefaultSong.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DefaultSong.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="FileManagerTest.Designer.vb">
+      <DependentUpon>FileManagerTest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FileManagerTest.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMM.Designer.vb">
+      <DependentUpon>FMM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FMM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Heathen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Heathen.Designer.vb">
+      <DependentUpon>Heathen.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfoForm.Designer.vb">
+      <DependentUpon>InfoForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="InfoForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -165,8 +189,20 @@
     <EmbeddedResource Include="CREDITANDINFO.resx">
       <DependentUpon>CREDITANDINFO.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="DefaultSong.resx">
+      <DependentUpon>DefaultSong.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileManagerTest.resx">
+      <DependentUpon>FileManagerTest.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMM.resx">
+      <DependentUpon>FMM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Heathen.resx">
+      <DependentUpon>Heathen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoForm.resx">
+      <DependentUpon>InfoForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -209,6 +245,24 @@
   <ItemGroup>
     <Content Include="icons8_joqsdker_dc.ico" />
     <Content Include="icons8_spyqsqs.ico" />
+    <None Include="Resources\icons8_info_zedzepopup.ico" />
+    <None Include="Resources\icons8_info_zedzepopup_32.png" />
+    <None Include="Resources\icons8_infoqsdqs_32.png" />
+    <None Include="Resources\icons8_delete_biqsdqsn.ico" />
+    <None Include="Resources\icons8_previousqdqs.ico" />
+    <None Include="Resources\icons8_nextazd.ico" />
+    <None Include="Resources\icons8_back_aqsdqsrrow_32.png" />
+    <None Include="Resources\icons8_forwqsdard_button.ico" />
+    <None Include="Resources\icons8_troqsdqsdllface.ico" />
+    <None Include="Resources\imageres_5377.ico" />
+    <None Include="Resources\imageres_1004.ico" />
+    <None Include="Resources\icons8_azefzefudio.ico" />
+    <None Include="Resources\icons8_coqsdqsdedy.ico" />
+    <None Include="Resources\500408.jpg" />
+    <None Include="Resources\imageres_15.ico" />
+    <None Include="Resources\Dakirby309-Simply-Styled-Default-Programs %281%29.ico" />
+    <None Include="Resources\icons8_codeazdazd_file.ico" />
+    <None Include="Resources\icons8_File_Eqsdqsdxplorer.ico" />
     <None Include="Resources\icons8_behavior_blocker.ico" />
     <None Include="Resources\iconsqsdqs8_skull.ico" />
     <None Include="Resources\icons8_azdazsystem_task.ico" />

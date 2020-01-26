@@ -1,0 +1,4 @@
+C:\Users\mehdi\Desktop\TESTUI\TESTUI\TESTUI\bin\RemoteViewing094 USEFULL
+C:\Users\mehdi\source\repos\RBBRat\RBBRat\bin\Debug
+C:\Users\mehdi\source\repos\RBBRat\Client\bin\Debug
+

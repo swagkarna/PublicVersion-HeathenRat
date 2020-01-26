@@ -30,7 +30,7 @@ Public Class TaskForm
 
         Dim Buffer() As Byte = Encoding.UTF8.GetBytes(AllToSend)
 
-        For Each client As TcpClient In Form1.LesClients
+        For Each client As TcpClient In Heathen.LesClients
 
             If ThetAskTokill = client.Client.RemoteEndPoint.ToString Then
 
@@ -56,7 +56,7 @@ Public Class TaskForm
 
 
 
-            For Each client As TcpClient In Form1.LesClients
+        For Each client As TcpClient In Heathen.LesClients
 
             If lk = client.Client.RemoteEndPoint.ToString Then
                 '    MessageBox.Show(client.Client.RemoteEndPoint.ToString)

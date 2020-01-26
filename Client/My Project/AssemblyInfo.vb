@@ -8,10 +8,10 @@ Imports System.Runtime.InteropServices
 
 ' Vérifiez les valeurs des attributs de l'assembly
 
-<Assembly: AssemblyTitle("Heathen Rat")>
-<Assembly: AssemblyDescription("")>
+<Assembly: AssemblyTitle("Heathen Rat By Arsium")>
+<Assembly: AssemblyDescription("Remote Access Tool")>
 <Assembly: AssemblyCompany("")>
-<Assembly: AssemblyProduct("Heathen Rat")>
+<Assembly: AssemblyProduct("Heathen Rat By Arsium")>
 <Assembly: AssemblyCopyright("Copyright ©  2020")>
 <Assembly: AssemblyTrademark("")>
 
@@ -31,5 +31,5 @@ Imports System.Runtime.InteropServices
 ' en utilisant '*', comme indiqué ci-dessous :
 ' <Assembly: AssemblyVersion("1.0.*")>
 
-<Assembly: AssemblyVersion("1.0.0.0")>
-<Assembly: AssemblyFileVersion("1.0.0.0")>
+<Assembly: AssemblyVersion("2.1.7.0")>
+<Assembly: AssemblyFileVersion("2.1.7.0")>

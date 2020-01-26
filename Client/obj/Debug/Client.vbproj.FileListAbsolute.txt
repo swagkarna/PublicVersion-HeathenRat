@@ -1,4 +1,3 @@
-C:\Users\mehdi\source\repos\RBBRat\Client\obj\Debug\Client.Form1.resources
 C:\Users\mehdi\source\repos\RBBRat\Client\obj\Debug\Client.Resources.resources
 C:\Users\mehdi\source\repos\RBBRat\Client\obj\Debug\Client.vbproj.GenerateResource.cache
 C:\Users\mehdi\source\repos\RBBRat\Client\bin\Debug\Bunifu.UI.WinForms.BunifuButton.xml
@@ -21,3 +20,8 @@ C:\Users\mehdi\source\repos\RBBRat\Client\obj\Debug\Client.ScreenForm.resources
 C:\Users\mehdi\source\repos\RBBRat\Client\obj\Debug\Client.vbprojAssemblyReference.cache
 C:\Users\mehdi\source\repos\RBBRat\Client\obj\Debug\Client.CREDITANDINFO.resources
 C:\Users\mehdi\source\repos\RBBRat\Client\obj\Debug\Client.TaskForm.resources
+C:\Users\mehdi\source\repos\RBBRat\Client\obj\Debug\Client.FileManagerTest.resources
+C:\Users\mehdi\source\repos\RBBRat\Client\obj\Debug\Client.FMM.resources
+C:\Users\mehdi\source\repos\RBBRat\Client\obj\Debug\Client.Heathen.resources
+C:\Users\mehdi\source\repos\RBBRat\Client\obj\Debug\Client.DefaultSong.resources
+C:\Users\mehdi\source\repos\RBBRat\Client\obj\Debug\Client.InfoForm.resources

@@ -22,7 +22,27 @@ Heathen Rat
   les recherches de ressources à l'aide de cette classe de ressource fortement typée.
 </summary>
 </member>
+<member name="P:Client.My.Resources.Resources._500408">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Client.My.Resources.Resources.Dakirby309_Simply_Styled_Default_Programs__1_">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Client.My.Resources.Resources.icons8_azdazsystem_task">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Client.My.Resources.Resources.icons8_azefzefudio">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Client.My.Resources.Resources.icons8_back_aqsdqsrrow_32">
 <summary>
   Recherche une ressource localisée de type System.Drawing.Bitmap.
 </summary>
@@ -42,7 +62,27 @@ Heathen Rat
   Recherche une ressource localisée de type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Client.My.Resources.Resources.icons8_codeazdazd_file">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Client.My.Resources.Resources.icons8_coqsdqsdedy">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Client.My.Resources.Resources.icons8_delete_biqsdqsn">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Client.My.Resources.Resources.icons8_export">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Client.My.Resources.Resources.icons8_File_Eqsdqsdxplorer">
 <summary>
   Recherche une ressource localisée de type System.Drawing.Bitmap.
 </summary>
@@ -52,7 +92,27 @@ Heathen Rat
   Recherche une ressource localisée de type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Client.My.Resources.Resources.icons8_forwqsdard_button">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Client.My.Resources.Resources.icons8_imaqsdqsdge_file">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Client.My.Resources.Resources.icons8_info_zedzepopup">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Client.My.Resources.Resources.icons8_info_zedzepopup_32">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Client.My.Resources.Resources.icons8_infoqsdqs_32">
 <summary>
   Recherche une ressource localisée de type System.Drawing.Bitmap.
 </summary>
@@ -82,6 +142,21 @@ Heathen Rat
   Recherche une ressource localisée de type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Client.My.Resources.Resources.icons8_nextazd">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Client.My.Resources.Resources.icons8_previousqdqs">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Client.My.Resources.Resources.icons8_troqsdqsdllface">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Client.My.Resources.Resources.icons8_workstqsdation">
 <summary>
   Recherche une ressource localisée de type System.Drawing.Bitmap.
@@ -103,6 +178,21 @@ Heathen Rat
 </summary>
 </member>
 <member name="P:Client.My.Resources.Resources.iconsqsdqsd8_server">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Client.My.Resources.Resources.imageres_1004">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Client.My.Resources.Resources.imageres_15">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Client.My.Resources.Resources.imageres_5377">
 <summary>
   Recherche une ressource localisée de type System.Drawing.Bitmap.
 </summary>

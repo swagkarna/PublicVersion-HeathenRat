@@ -326,7 +326,7 @@ Partial Class BUILDER
         Me.BunifuButton3.IdleIconLeftImage = Nothing
         Me.BunifuButton3.IdleIconRightImage = Nothing
         Me.BunifuButton3.IndicateFocus = False
-        Me.BunifuButton3.Location = New System.Drawing.Point(450, 0)
+        Me.BunifuButton3.Location = New System.Drawing.Point(466, 12)
         Me.BunifuButton3.Name = "BunifuButton3"
         StateProperties13.BorderColor = System.Drawing.Color.Silver
         StateProperties13.BorderRadius = 3
@@ -346,7 +346,7 @@ Partial Class BUILDER
         StateProperties14.IconLeftImage = Nothing
         StateProperties14.IconRightImage = Nothing
         Me.BunifuButton3.OnPressedState = StateProperties14
-        Me.BunifuButton3.Size = New System.Drawing.Size(50, 38)
+        Me.BunifuButton3.Size = New System.Drawing.Size(22, 19)
         Me.BunifuButton3.TabIndex = 6
         Me.BunifuButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.BunifuButton3.TextMarginLeft = 0
@@ -519,6 +519,7 @@ Partial Class BUILDER
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(56, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(507, 360)
+        Me.ControlBox = False
         Me.Controls.Add(Me.T2)
         Me.Controls.Add(Me.T1)
         Me.Controls.Add(Me.BunifuTextBox3)
@@ -529,8 +530,10 @@ Partial Class BUILDER
         Me.Controls.Add(Me.BunifuLabel1)
         Me.Controls.Add(Me.BunifuTextBox2)
         Me.Controls.Add(Me.BunifuTextBox1)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "BUILDER"
         Me.Text = "BUILDER"
         Me.ResumeLayout(False)

@@ -1,3 +1,12 @@
+This rat works with tcp client and server ! I don't take any responsabilites for misusage of this Remote Access Tool , you're  responsible for your acts ! ! I used some different libraries (for example the Passwords Plugin) and all what I re-used in my code is linked in commentaries !
+
+
+
+Currently in developement , be patient I work alone
+
+
+
+
 All my friends are heathens , take it slow 
 RBBRat = Stub 
 Client = GUI Server
@@ -19,7 +28,15 @@ NOTE :
 -LET DDOS.dll next to Heathen Rat , it's a plugin to show you how can work a plugin
 -I put code of small plugin inside my client (like change wallpaper) and won't move it to build a plugin
 
+TODO List :
 
+-Improve UI == 55 %
+-File Manager == 95 %
+-Funny == 30 %
+-Funny Audio == 95 %
+-More DDOS/Flood Options == 0 %
+-More options for builder == 0 %
+... == 0 %
 
 I used src from https://www.youtube.com/watch?v=UWJja8Qp65Y&t and https://www.youtube.com/watch?v=UytjOcSHje8
 

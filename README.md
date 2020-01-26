@@ -30,13 +30,12 @@ NOTE :
 
 TODO List :
 
--Improve UI == 55 %
--File Manager == 95 %
--Funny == 30 %
--Funny Audio == 95 %
--More DDOS/Flood Options == 0 %
--More options for builder == 0 %
-... == 0 %
+* -File Manager : done 
+* -Funny Audio : done
+* -Funny : 30 %
+* -Others : 0 %
+* -Options builder : 0 %
+
 
 I used src from https://www.youtube.com/watch?v=UWJja8Qp65Y&t and https://www.youtube.com/watch?v=UytjOcSHje8
 

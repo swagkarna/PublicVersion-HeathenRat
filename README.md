@@ -11,6 +11,16 @@ All my friends are heathens , take it slow
 RBBRat = Stub 
 Client = GUI Server
 
+LAST UPDATE 26-01-2020 20:31 :
+
+-corrected bugs with file manager
+-added funny audio + meme sounds
+-command center improved
+-minor bugs corrected
+-added icons
+-added commentaries and removed unnecessary commentaries
+-removed some useless code for now
+
 LAST UPDATE 25-01-20 20:55 :
 
 -fixed bugs client not try to reconnect to server after those closes

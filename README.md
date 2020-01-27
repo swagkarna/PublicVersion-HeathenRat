@@ -1,4 +1,4 @@
-This rat works with tcp client and server ! I don't take any responsabilites for misusage of this Remote Access Tool , you're  responsible for your acts ! ! I used some different libraries (for example the Passwords Plugin) and all what I re-used in my code is linked in commentaries !
+This rat works with tcp client and server ! I don't take any responsabilites for misusage of this Remote Access Tool , you're  responsible for your acts ! ! I used some different libraries (for example the Passwords Plugin) and all what I re-used in my code is linked in commentaries ! Simple but powerfull !
 
 
 
@@ -44,6 +44,7 @@ TODO List :
 * -Funny Audio : done
 * -Funny : 30 %
 * -Others : 0 %
+* -Need to add event if connection is lost for client to server
 * -Options builder : 0 %
 
 

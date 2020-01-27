@@ -36,6 +36,7 @@ Partial Class FMM
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.ContextMenuStrip1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -64,14 +65,14 @@ Partial Class FMM
         '
         Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GoToolStripMenuItem, Me.BackToolStripMenuItem, Me.DeleteToolStripMenuItem})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(108, 70)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(181, 92)
         '
         'GoToolStripMenuItem
         '
         Me.GoToolStripMenuItem.BackColor = System.Drawing.Color.DarkViolet
         Me.GoToolStripMenuItem.Image = Global.Client.My.Resources.Resources.icons8_nextazd
         Me.GoToolStripMenuItem.Name = "GoToolStripMenuItem"
-        Me.GoToolStripMenuItem.Size = New System.Drawing.Size(107, 22)
+        Me.GoToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.GoToolStripMenuItem.Text = "Go"
         '
         'BackToolStripMenuItem
@@ -79,7 +80,7 @@ Partial Class FMM
         Me.BackToolStripMenuItem.BackColor = System.Drawing.Color.DarkViolet
         Me.BackToolStripMenuItem.Image = Global.Client.My.Resources.Resources.icons8_previousqdqs
         Me.BackToolStripMenuItem.Name = "BackToolStripMenuItem"
-        Me.BackToolStripMenuItem.Size = New System.Drawing.Size(107, 22)
+        Me.BackToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.BackToolStripMenuItem.Text = "Back"
         '
         'DeleteToolStripMenuItem
@@ -87,16 +88,16 @@ Partial Class FMM
         Me.DeleteToolStripMenuItem.BackColor = System.Drawing.Color.DarkViolet
         Me.DeleteToolStripMenuItem.Image = Global.Client.My.Resources.Resources.icons8_delete_biqsdqsn
         Me.DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem"
-        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(107, 22)
+        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.DeleteToolStripMenuItem.Text = "Delete"
         '
         'Label3
         '
         Me.Label3.BackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(56, Byte), Integer))
         Me.Label3.ForeColor = System.Drawing.Color.Lime
-        Me.Label3.Location = New System.Drawing.Point(286, 9)
+        Me.Label3.Location = New System.Drawing.Point(389, 9)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(676, 30)
+        Me.Label3.Size = New System.Drawing.Size(573, 30)
         Me.Label3.TabIndex = 13
         Me.Label3.Text = "Path"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -151,12 +152,23 @@ Partial Class FMM
         Me.Label4.TabIndex = 14
         Me.Label4.Text = "Name"
         '
+        'ComboBox1
+        '
+        Me.ComboBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(56, Byte), Integer))
+        Me.ComboBox1.ForeColor = System.Drawing.Color.Lime
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(240, 15)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(143, 21)
+        Me.ComboBox1.TabIndex = 15
+        '
         'FMM
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(56, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1007, 369)
+        Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.ListView1)
         Me.Controls.Add(Me.Label3)
@@ -189,4 +201,5 @@ Partial Class FMM
     Friend WithEvents Label2 As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label4 As Label
+    Friend WithEvents ComboBox1 As ComboBox
 End Class

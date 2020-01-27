@@ -11,33 +11,38 @@ Public Class FMM
     End Sub
 
     Private Sub GoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GoToolStripMenuItem.Click
+
         Dim theendpoint As String = Me.Text
 
-        Dim Folder As String = Label3.Text & "\"
+            Dim Folder As String = Label3.Text & "\"
 
-        '      Dim wheretogo As String = ListView1.SelectedItems(0).Text + "\" + "@wheretogo"
-        Dim wheretogo As String = ListView1.SelectedItems(0).Text + "@wheretogo"
+            '      Dim wheretogo As String = ListView1.SelectedItems(0).Text + "\" + "@wheretogo"
+            Dim wheretogo As String = ListView1.SelectedItems(0).Text + "@wheretogo"
 
-        Dim AllToSend As String = Folder + wheretogo
+            Dim AllToSend As String = Folder + wheretogo
 
-        Dim buffer() As Byte = Encoding.UTF8.GetBytes(AllToSend)
-        For Each client As TcpClient In Heathen.LesClients
+            Dim buffer() As Byte = Encoding.UTF8.GetBytes(AllToSend)
+            For Each client As TcpClient In Heathen.LesClients
 
-            If theendpoint = client.Client.RemoteEndPoint.ToString Then
+                If theendpoint = client.Client.RemoteEndPoint.ToString Then
 
-                Try
-                    client.GetStream().Write(buffer, 0, buffer.Length) '''
-                Catch ex As Exception
+                    Try
+                        client.GetStream().Write(buffer, 0, buffer.Length) '''
+                    Catch ex As Exception
 
-                    MessageBox.Show("The client seems to be offline")
-                End Try
-            End If
+                        MessageBox.Show("The client seems to be offline")
+                    End Try
+                End If
 
-        Next
+            Next
+
     End Sub
 
     Private Sub BackToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BackToolStripMenuItem.Click
-        Dim theendpoint As String = Me.Text
+        If Label3.Text.Count = 3 Then
+            MessageBox.Show("Can't go back")
+        Else
+            Dim theendpoint As String = Me.Text
 
 
 
@@ -60,6 +65,7 @@ Public Class FMM
             End If
 
         Next
+        End If
     End Sub
 
     Private Sub DeleteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DeleteToolStripMenuItem.Click
@@ -93,6 +99,36 @@ Public Class FMM
             End If
 
         Next
+
+    End Sub
+
+    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
+        Dim NewDrive As String = ComboBox1.Text
+
+        Dim theendpoint As String = Me.Text
+
+
+
+
+        Dim allstr As String = "TimetoChangeVolume" + "\" + NewDrive
+
+        Dim buffer() As Byte = Encoding.UTF8.GetBytes(allstr)
+
+
+        For Each client As TcpClient In Heathen.LesClients
+
+            If theendpoint = client.Client.RemoteEndPoint.ToString Then
+                '    MessageBox.Show(client.Client.RemoteEndPoint.ToString)
+                Try
+                    client.GetStream().Write(buffer, 0, buffer.Length) '''
+                Catch ex As Exception
+
+                    MessageBox.Show("The client seems to be offline")
+                End Try
+            End If
+
+        Next
+
 
     End Sub
 End Class

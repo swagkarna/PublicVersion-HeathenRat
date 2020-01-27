@@ -40,7 +40,7 @@ NOTE :
 
 TODO List :
 
-* -File Manager : done , added now  letters for each drive 
+* -File Manager : done , will add letters for each drive 
 * -Funny Audio : done
 * -Funny : 30 %
 * -Others : 0 %
